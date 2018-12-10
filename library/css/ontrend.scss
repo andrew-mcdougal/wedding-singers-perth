@@ -1,0 +1,213 @@
+$white: #FFF;
+$primary: #2C3B41;
+$primary-lite: lighten($primary, 20%);
+$primary-liter: lighten($primary, 40%);
+
+
+// settings
+body {
+  font-size: 18px;
+  line-height: 120%;
+}
+
+
+
+
+// mobile first header
+.header {
+  background: $primary;
+}
+
+// hamburger
+.hamburger {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+
+
+// no height mobile nav for slidedown effect
+.nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .4s ease-in;
+
+  &.show-menu {
+    max-height: 100vh;
+  }
+
+  li {
+    position: relative;
+    border-top: 1px solid rgba($white, 0.2);
+
+    a {
+      font-size: .9em;
+
+      color: $primary-liter;
+
+      &:visited,
+      &:hover,
+      &:focus
+      &:visited:hover,
+      &:visited:focus,
+      &:link,
+      &:visited:link {
+        color: $primary-liter;
+      }
+
+      &:hover {
+        background: darken($primary, 1%);
+      }
+    }
+
+    // has sub nav
+    &.menu-item-has-children {
+
+      .fa {
+        position: absolute;
+        z-index: 100;
+        cursor: pointer;
+        right: 10px;
+        top: 12px;
+        font-size: 1.5em;
+        color: $primary-liter;
+      }
+
+      // sub nav
+      ul {
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .4s ease-in;
+
+        &.show-submenu {
+          max-height: 100vh;
+        }
+
+        ul li a {
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+// site header
+.header-font {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.site-header {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: .5em .25em 0;
+  font-weight: 700;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.site-subheader {
+  color: $primary-lite;
+  font-size: 1em;
+  margin: 0 0 .5em 1.4em;
+}
+
+@media (min-width:768px) {
+  // hamburger
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    max-height: none;
+    overflow: visible;
+
+    /*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    */
+
+    &:before {
+      display: none;
+    }
+
+    i {
+      display: none;
+    }
+
+    li {
+      position: relative;
+
+      a {
+        //font-size: .7em;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      &.menu-item-has-children {
+
+        ul {
+          max-height: none;
+          overflow: visible;
+
+          li {
+            float: none;
+          }
+
+          ul li a {
+            padding-left: 10px;
+          }
+        }
+      }
+
+      &.current-menu-item,
+      &.current-menu-ancestor {
+
+        > a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
