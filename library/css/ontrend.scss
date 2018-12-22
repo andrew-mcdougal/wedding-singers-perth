@@ -1,7 +1,20 @@
+
+
+
 $white: #FFF;
-$primary: #2C3B41;
+$primary: #231F20;
 $primary-lite: lighten($primary, 20%);
 $primary-liter: lighten($primary, 40%);
+
+$secondary: #ad974f;
+$secondary-lite: lighten($secondary, 20%);
+$secondary-liter: lighten($secondary, 40%);
+
+$grey: #757575;
+
+
+$font-heading-logo: 'Great Vibes', cursive;
+//$font-headings: 'Dancing Script', cursive;
 
 
 // settings
@@ -15,7 +28,7 @@ body {
 
 // mobile first header
 .header {
-  background: $primary;
+  background: $white;
 }
 
 // hamburger
@@ -25,7 +38,46 @@ body {
   top: 15px;
 }
 
+// site header
+.inner-header {
 
+  .inner-header--logo {
+    padding: 1rem;
+
+    .header-font {
+      font-size: 1.5em;
+      font-family: $font-heading-logo;
+      margin: 0;
+      font-weight: 100;
+
+      a {
+        text-decoration: none;
+        color: $primary;
+      }
+
+      &.site-header {
+        margin-bottom: 5px;        
+      }
+
+      &.site-subheader {
+        color: $grey;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        margin-bottom: -8px;
+      }
+    }
+  }
+
+  // hamburger
+  .hamburger .hamburger-inner {
+    background-color: $primary;
+
+    &:after,
+    &:before {
+      background-color: $primary;
+    }
+  }
+}
 
 // no height mobile nav for slidedown effect
 .nav {
@@ -39,12 +91,12 @@ body {
 
   li {
     position: relative;
-    border-top: 1px solid rgba($white, 0.2);
+    border-top: 1px solid rgba($grey, 0.2);
 
     a {
       font-size: .9em;
 
-      color: $primary-liter;
+      color: $primary;
 
       &:visited,
       &:hover,
@@ -53,11 +105,13 @@ body {
       &:visited:focus,
       &:link,
       &:visited:link {
-        color: $primary-liter;
+        color: $grey;
       }
 
-      &:hover {
-        background: darken($primary, 1%);
+      &:hover,
+      &:visited:hover {
+        background: darken($grey, 20%);
+        color: $white;
       }
     }
 
@@ -93,28 +147,6 @@ body {
   }
 }
 
-// site header
-.header-font {
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.site-header {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  margin: .5em .25em 0;
-  font-weight: 700;
-
-  a {
-    text-decoration: none;
-    color: $white;
-  }
-}
-
-.site-subheader {
-  color: $primary-lite;
-  font-size: 1em;
-  margin: 0 0 .5em 1.4em;
-}
 
 @media (min-width:768px) {
   // hamburger
@@ -174,7 +206,7 @@ body {
       &.current-menu-ancestor {
 
         > a {
-          color: $white;
+          //color: $white;
         }
       }
     }
@@ -182,13 +214,50 @@ body {
 }
 
 
+// responsive
+@media (min-width: 767px) {
+  .inner-header .inner-header--logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
+    .header-font {
 
+      &.site-header {
+        font-size: 4em;
+        line-height: 180%;
+        margin: auto;
+        text-shadow: 2px 2px 2px rgba($primary,0.5);
+      }
 
+      &.site-subheader {
+        font-size: 1.85em;
+        line-height: 100%;
+        margin: auto;
+        letter-spacing: 0;
+        margin-top: -20px;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $grey;
+      }
+    }
+  }
 
+  .inner-header {
 
+    .nav {
+      display: flex;
+      justify-content: center;
 
+      li {
 
+        a {
+          color: $primary;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
 
 
 

@@ -46,13 +46,12 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap cf">
+				<div class="inner-header" class="wrap cf">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p class="site-header header-font" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<p class="site-subheader header-font"><?php bloginfo('description'); ?></p>
+                    <div class="inner-header--logo">
+                        <p class="header-font site-header" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+                        <p class="header-font site-subheader"><?php bloginfo('description'); ?></p>
+                    </div>
 
 					<!-- hamburger icon -->
 					<button class="hamburger hamburger--collapse" type="button">
