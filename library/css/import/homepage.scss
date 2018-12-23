@@ -1,0 +1,32 @@
+#content.homepage {
+  margin-top: 0;
+
+  .home-hero-desktop {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 767px) {
+
+    .home-hero-desktop {
+      display: block;
+    }
+
+    .home-hero-mobile {
+      display: none;
+    }
+  }
+}
+
+.home-hero-mobile {
+
+  background-position:  center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}

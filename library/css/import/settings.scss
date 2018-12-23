@@ -1,0 +1,21 @@
+$white: #FFF;
+$primary: #231F20;
+$primary-lite: lighten($primary, 20%);
+$primary-liter: lighten($primary, 40%);
+
+$secondary: #ad974f;
+$secondary-lite: lighten($secondary, 20%);
+$secondary-liter: lighten($secondary, 40%);
+
+$grey: #757575;
+
+
+$font-heading-logo: 'Great Vibes', cursive;
+//$font-headings: 'Dancing Script', cursive;
+
+
+// settings
+body {
+  font-size: 18px;
+  line-height: 120%;
+}
