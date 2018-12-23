@@ -129,7 +129,11 @@ body {
 #content.homepage {
   margin-top: 0; }
   #content.homepage .home-hero {
-    position: relative; }
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    width: 100%; }
     #content.homepage .home-hero:after {
       content: "";
       background: rgba(0, 0, 0, 0.7);
@@ -150,10 +154,20 @@ body {
       display: none; } }
 
 .home-hero-mobile {
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  width: 100%;
   height: 50vh; }
+
+.home-hero-desktop {
+  height: 100vh;
+  max-height: 600px; }
+
+.grid-column-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  margin-bottom: 2em; }
+  .grid-column-three .card {
+    border: 1px solid #757575;
+    border-radius: 4px;
+    padding: 0 1em; }
 
 /*# sourceMappingURL=ontrend.css.map */

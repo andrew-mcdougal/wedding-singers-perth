@@ -18,11 +18,11 @@
 			<div id="content" class="homepage">
 
 				<div class="home-hero home-hero-mobile" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-13.jpg');">
-					Read more
+					<p>Mobile version</p>
 				</div>
 
-				<div class="home-hero home-hero-desktop">
-					<img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-33.jpg" />
+				<div class="home-hero home-hero-desktop" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-33.jpg');">
+					<p>Desktop version</p>
 				</div>
 				
 				
@@ -39,7 +39,7 @@
 
 									<?php
 										// the content (pretty self explanatory huh)
-										the_content();
+										//the_content();
 
 										/*
 										 * Link Pages is used in case you have posts that are set to break into
@@ -60,6 +60,35 @@
 											'link_after'  => '</span>',
 										) );
 									?>
+								</section>
+
+								<!-- hardcoded for review -->
+								<section class="entry-content cf" itemprop="articleBody">
+									<p>With 20 years experience as a musician, specialising in weddings and corporate events, Josh has performed at over 500 weddings and boasts one of the largest song repertoires in Perth. Rather than using backing tracks, his live solo performance features vocals, acoustic guitar, stomp/beat box and loop pedal, which is paired with top quality audio equipment to produce a full sound that keeps the party on the dance floor where it belongs!</p>
+
+									<!-- cards 3 column -->
+									<div class="grid-column-three">
+										<div class="card">
+											<h3>Solo</h3>
+											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2015/07/josh-johnstone-bio-400x267.jpg" />
+											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+										</div>
+										<div class="card">
+											<h3>Duo</h3>
+											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2016/09/original-act-josh-johnstone-1-e1488808212835-400x234.jpg" />
+											<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+										</div>
+										<div class="card">
+											<h3>Three piece</h3>
+											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2018/10/wedding-entertainment-perth-hire.jpg" />
+											<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+										</div>
+									</div>
+
+									<p>Depending on the size of your event, Josh can perform solo, or with his duo, trio… all the way up to a 6 piece band, which features a female singer and some of Perth’s best musicians. Josh’s accompanying musicians are all not only WAAPA trained (Western Australia Academy of Performing Arts), but have been also playing with Josh for several years, so you can expect nothing but the highest quality whichever lineup you choose.</p>
+									<p>As well as both stripped back acoustic and uptempo party music, Josh also offers a DJ service as part of all Your Wedding Singer packages and also has an interactive</p>
+									<p>Photo-booth available for hire.</p>
+									<p>Email Josh directly HERE to enquire about your special day</p>
 								</section>
 
 							</article>
