@@ -17,12 +17,12 @@
 
 			<div id="content" class="homepage">
 
-				<div class="home-hero-mobile" style="background-image: url('http://localhost:8888/weddingsingersperth/wp-content/uploads/2018/12/image-13.jpg');">
+				<div class="home-hero-mobile" style="background-image: url('http://localhost:8888/yws/wp-content/uploads/2018/12/image-13.jpg');">
 					Read more
 				</div>
 
 				<div class="home-hero-desktop">
-					<img src="http://localhost:8888/weddingsingersperth/wp-content/uploads/2018/12/image-33.jpg" />
+					<img src="http://localhost:8888/yws/wp-content/uploads/2018/12/image-33.jpg" />
 				</div>
 				
 				
