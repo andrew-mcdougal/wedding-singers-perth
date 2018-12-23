@@ -17,11 +17,11 @@
 
 			<div id="content" class="homepage">
 
-				<div class="home-hero-mobile" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-13.jpg');">
+				<div class="home-hero home-hero-mobile" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-13.jpg');">
 					Read more
 				</div>
 
-				<div class="home-hero-desktop">
+				<div class="home-hero home-hero-desktop">
 					<img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-33.jpg" />
 				</div>
 				
