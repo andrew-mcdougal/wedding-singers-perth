@@ -12,10 +12,12 @@ $grey: #757575;
 
 $font-heading-logo: 'Great Vibes', cursive;
 //$font-headings: 'Dancing Script', cursive;
+$font-body: 'Open Sans', sans-serif;
 
 
 // settings
 body {
   font-size: 18px;
   line-height: 120%;
+  font-family: $font-body;
 }

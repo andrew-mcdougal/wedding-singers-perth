@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,800);
 body {
   font-size: 18px;
-  line-height: 120%; }
+  line-height: 120%;
+  font-family: "Open Sans", sans-serif; }
 
 body {
   font-size: 18px;
@@ -166,8 +168,49 @@ body {
   grid-gap: 1em;
   margin-bottom: 2em; }
   .grid-column-three .card {
-    border: 1px solid #757575;
-    border-radius: 4px;
-    padding: 0 1em; }
+    border-radius: 4px; }
+    .grid-column-three .card img {
+      margin: 0; }
+
+.button-standard {
+  background: #046BF8;
+  color: #FFF;
+  padding: 1em;
+  display: inline-block;
+  margin-bottom: 1em;
+  border-radius: 50px; }
+
+.card-1 {
+  background-color: #fff;
+  overflow: hidden;
+  max-width: 320px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.48);
+  text-align: center;
+  transition: all .2s ease-out; }
+  .card-1:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.48); }
+  .card-1 img {
+    max-width: 100%; }
+
+.card-1-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 1em; }
+  .card-1-content:before {
+    content: '';
+    width: 200%;
+    height: 100px;
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    transform: rotate(-8deg);
+    top: -60px;
+    left: -10%;
+    z-index: -1; }
+  .card-1-content h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    margin: 0 0 .5em 0;
+    font-size: 1.5em; }
 
 /*# sourceMappingURL=ontrend.css.map */

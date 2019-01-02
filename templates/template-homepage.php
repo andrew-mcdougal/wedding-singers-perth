@@ -68,21 +68,38 @@
 
 									<!-- cards 3 column -->
 									<div class="grid-column-three">
-										<div class="card">
-											<h3>Solo</h3>
+
+
+										<div class="card card-1">
 											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2015/07/josh-johnstone-bio-400x267.jpg" />
+											<div class="card-1-content">
+											<h3>Solo</h3>
+											
 											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+											<a class="button-standard">Find out more</a>
 										</div>
-										<div class="card">
-											<h3>Duo</h3>
+										</div>
+										<div class="card card-1">
 											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2016/09/original-act-josh-johnstone-1-e1488808212835-400x234.jpg" />
+											
+											<div class="card-1-content">
+												<h3>Duo</h3>
+											
 											<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+											<a class="button-standard">Find out more</a>
 										</div>
-										<div class="card">
-											<h3>Three piece</h3>
+										</div>
+										<div class="card card-1">
+
 											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2018/10/wedding-entertainment-perth-hire.jpg" />
+											<div class="card-1-content">
+												<h3>Three piece</h3>
+											
 											<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+											<a class="button-standard">Find out more</a>
 										</div>
+										</div>
+
 									</div>
 
 									<p>Depending on the size of your event, Josh can perform solo, or with his duo, trio… all the way up to a 6 piece band, which features a female singer and some of Perth’s best musicians. Josh’s accompanying musicians are all not only WAAPA trained (Western Australia Academy of Performing Arts), but have been also playing with Josh for several years, so you can expect nothing but the highest quality whichever lineup you choose.</p>
