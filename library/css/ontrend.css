@@ -162,15 +162,22 @@ body {
   height: 100vh;
   max-height: 600px; }
 
-.grid-column-three {
+.grid-column {
+  display: block; }
+
+@media all and (min-width: 768px) {
+  .grid-column-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 2em; } }
+.card {
+  border-radius: 4px;
+  margin: 0 auto 1em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
-  margin-bottom: 2em; }
-  .grid-column-three .card {
-    border-radius: 4px; }
-    .grid-column-three .card img {
-      margin: 0; }
+  grid-template-rows: auto 1fr auto; }
+  .card img {
+    margin: 0; }
 
 .button-standard {
   background: #046BF8;
@@ -179,6 +186,9 @@ body {
   display: inline-block;
   margin-bottom: 1em;
   border-radius: 50px; }
+
+.card-1 .button-standard {
+  margin: 0 1em 1em; }
 
 .card-1 {
   background-color: #fff;

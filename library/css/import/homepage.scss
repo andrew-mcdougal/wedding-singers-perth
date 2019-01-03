@@ -52,22 +52,33 @@
   max-height: 600px;
 }
 
-.grid-column-three {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
-  margin-bottom: 2em;
+.grid-column {
+  display: block;
+}
 
-  .card {
-    //border: 1px solid $grey;
-    border-radius: 4px;
-    //padding: 0 1em;
-
-    img {
-      margin: 0;
-    }
+@media all and (min-width: 768px) {
+  .grid-column-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 2em;
   }
 }
+
+  
+
+.card {
+  border-radius: 4px;
+  margin: 0 auto 1em;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  img {
+    margin: 0;
+  }
+}
+
+
 
 
 
@@ -78,11 +89,17 @@
   background: #046BF8;
   color: $white;
   padding: 1em;
-display: inline-block;
-margin-bottom: 1em;
-border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1em;
+  border-radius: 50px;
 }
 
+.card-1 {
+
+  .button-standard {
+    margin: 0 1em 1em;
+  }
+}
 
 
 

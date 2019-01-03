@@ -67,37 +67,32 @@
 									<p>With 20 years experience as a musician, specialising in weddings and corporate events, Josh has performed at over 500 weddings and boasts one of the largest song repertoires in Perth. Rather than using backing tracks, his live solo performance features vocals, acoustic guitar, stomp/beat box and loop pedal, which is paired with top quality audio equipment to produce a full sound that keeps the party on the dance floor where it belongs!</p>
 
 									<!-- cards 3 column -->
-									<div class="grid-column-three">
+									<div class="grid-column grid-column-three">
 
 
 										<div class="card card-1">
-											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2015/07/josh-johnstone-bio-400x267.jpg" />
+											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2015/07/category-soloist-600x400-1-600x400.jpg" />
 											<div class="card-1-content">
-											<h3>Solo</h3>
-											
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+												<h3>Solo</h3>
+												<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+											</div>
 											<a class="button-standard">Find out more</a>
 										</div>
-										</div>
 										<div class="card card-1">
-											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2016/09/original-act-josh-johnstone-1-e1488808212835-400x234.jpg" />
-											
+											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2015/07/category-duo-600x400-2-600x400.jpg" />
 											<div class="card-1-content">
 												<h3>Duo</h3>
-											
-											<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+												<p>Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+											</div>
 											<a class="button-standard">Find out more</a>
 										</div>
-										</div>
 										<div class="card card-1">
-
 											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2018/10/wedding-entertainment-perth-hire.jpg" />
 											<div class="card-1-content">
 												<h3>Three piece</h3>
-											
-											<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+												<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+											</div>
 											<a class="button-standard">Find out more</a>
-										</div>
 										</div>
 
 									</div>
