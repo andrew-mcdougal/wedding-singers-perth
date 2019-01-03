@@ -11,6 +11,19 @@
     position: relative;
     width: 100%;
 
+    i {
+      color: $white;
+      font-size: 3em;
+      position: absolute;
+      z-index: 10;
+      
+      top: 90%;
+      left: 50%;
+
+      transform: translate(-50%, -10%);
+
+    }
+
     &:after {
       content: "";
       background: rgba(0,0,0,0.7);
@@ -92,6 +105,11 @@
   display: inline-block;
   margin-bottom: 1em;
   border-radius: 50px;
+
+  &:hover {
+    color: $white;
+    background: darken(#046BF8,5%);
+  }
 }
 
 .card-1 {

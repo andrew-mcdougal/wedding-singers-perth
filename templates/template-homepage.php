@@ -22,7 +22,7 @@
 				</div>
 
 				<div class="home-hero home-hero-desktop" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-33.jpg');">
-					<p>Desktop version</p>
+					<i class="fas fa-chevron-down"></i>
 				</div>
 				
 				
@@ -76,7 +76,7 @@
 												<h3>Solo</h3>
 												<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
 											</div>
-											<a class="button-standard">Find out more</a>
+											<a class="button-standard"><i class="fas fa-info-circle"></i> Find out more</a>
 										</div>
 										<div class="card card-1">
 											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2015/07/category-duo-600x400-2-600x400.jpg" />
@@ -84,7 +84,7 @@
 												<h3>Duo</h3>
 												<p>Ut enim ad minima veniam, quis nostrum exercitationem.</p>
 											</div>
-											<a class="button-standard">Find out more</a>
+											<a class="button-standard"><i class="fas fa-info-circle"></i> Find out more</a>
 										</div>
 										<div class="card card-1">
 											<img src="http://grandstandagency.com.au/website2/wp-content/uploads/2018/10/wedding-entertainment-perth-hire.jpg" />
@@ -92,7 +92,7 @@
 												<h3>Three piece</h3>
 												<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 											</div>
-											<a class="button-standard">Find out more</a>
+											<a class="button-standard"><i class="fas fa-info-circle"></i> Find out more</a>
 										</div>
 
 									</div>

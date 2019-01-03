@@ -4,6 +4,10 @@ body {
   line-height: 120%;
   font-family: "Open Sans", sans-serif; }
 
+p {
+  margin-top: 0;
+  line-height: 120%; }
+
 body {
   font-size: 18px;
   line-height: 120%; }
@@ -136,6 +140,14 @@ body {
     background-size: cover;
     position: relative;
     width: 100%; }
+    #content.homepage .home-hero i {
+      color: #FFF;
+      font-size: 3em;
+      position: absolute;
+      z-index: 10;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -10%); }
     #content.homepage .home-hero:after {
       content: "";
       background: rgba(0, 0, 0, 0.7);
@@ -186,6 +198,9 @@ body {
   display: inline-block;
   margin-bottom: 1em;
   border-radius: 50px; }
+  .button-standard:hover {
+    color: #FFF;
+    background: #0460df; }
 
 .card-1 .button-standard {
   margin: 0 1em 1em; }
