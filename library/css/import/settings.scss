@@ -11,8 +11,9 @@ $grey: #757575;
 
 
 $font-heading-logo: 'Great Vibes', cursive;
-//$font-headings: 'Dancing Script', cursive;
-$font-body: 'Open Sans', sans-serif;
+$font-headings: 'Playfair Display', serif;
+$font-body: 'Fauna One', sans-serif;
+$font-body: 'Fanwood Text', sans-serif;
 
 
 // settings
@@ -25,4 +26,30 @@ body {
 p {
 	margin-top: 0;
 	line-height: 120%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-headings;
+}
+
+
+
+.entry-content {
+
+	p {
+		line-height: 150%;
+	}
+}
+
+footer {
+
+	p {
+		margin-top: 1em;
+		font-family: $font-headings;
+	}
 }

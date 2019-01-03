@@ -1,16 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,800);
+@import url(https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display|Fanwood+Text);
 body {
   font-size: 18px;
   line-height: 120%;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Fanwood Text", sans-serif; }
 
 p {
   margin-top: 0;
   line-height: 120%; }
 
-body {
-  font-size: 18px;
-  line-height: 120%; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif; }
+
+.entry-content p {
+  line-height: 150%; }
+
+footer p {
+  margin-top: 1em;
+  font-family: "Playfair Display", serif; }
 
 .header {
   background: #FFF; }
@@ -53,7 +65,8 @@ body {
     border-top: 1px solid rgba(117, 117, 117, 0.2); }
     .nav li a {
       font-size: .9em;
-      color: #231F20; }
+      color: #231F20;
+      text-transform: uppercase; }
       .nav li a:visited, .nav li a:hover, .nav li a:focus
       .nav li a:visited:hover, .nav li a:visited:focus, .nav li a:link, .nav li a:visited:link {
         color: #757575; }
@@ -140,17 +153,21 @@ body {
     background-size: cover;
     position: relative;
     width: 100%; }
-    #content.homepage .home-hero i {
+    #content.homepage .home-hero i, #content.homepage .home-hero p {
       color: #FFF;
       font-size: 3em;
       position: absolute;
       z-index: 10;
-      top: 90%;
+      top: 80vh;
       left: 50%;
-      transform: translate(-50%, -10%); }
+      transform: translate(-50%, -10vh); }
+    #content.homepage .home-hero p {
+      top: 40vh;
+      font-family: 'Playfair Display';
+      text-align: center; }
     #content.homepage .home-hero:after {
       content: "";
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.3);
       position: absolute;
       top: 0;
       left: 0;
@@ -233,7 +250,7 @@ body {
     left: -10%;
     z-index: -1; }
   .card-1-content h3 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 800;
     margin: 0 0 .5em 0;
     font-size: 1.5em; }

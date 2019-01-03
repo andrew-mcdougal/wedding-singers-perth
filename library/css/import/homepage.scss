@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,800);
 
+@import url(https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display|Fanwood+Text);
+
 #content.homepage {
   margin-top: 0;
 
@@ -11,22 +13,28 @@
     position: relative;
     width: 100%;
 
-    i {
+    i, p {
       color: $white;
       font-size: 3em;
       position: absolute;
       z-index: 10;
       
-      top: 90%;
+      top: 80vh;
       left: 50%;
 
-      transform: translate(-50%, -10%);
+      transform: translate(-50%, -10vh);
 
+    }
+
+    p {
+      top: 40vh;
+      font-family: 'Playfair Display';
+      text-align: center;
     }
 
     &:after {
       content: "";
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.3);
       position: absolute;
       top: 0;
       left: 0;
@@ -159,7 +167,7 @@
   }
 
   h3 {
-    font-family: $font-body;
+    font-family: $font-headings;
     font-weight: 800;
     margin: 0 0 .5em 0;
     font-size: 1.5em;

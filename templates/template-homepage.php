@@ -21,7 +21,8 @@
 					<p>Mobile version</p>
 				</div>
 
-				<div class="home-hero home-hero-desktop" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-33.jpg');">
+				<div class="home-hero home-hero-desktop" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/yws-bw-tint.jpg');">
+					<p>Josh Johnstone is Your Wedding Singer...</p>
 					<i class="fas fa-chevron-down"></i>
 				</div>
 				

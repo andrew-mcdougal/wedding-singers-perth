@@ -153,11 +153,14 @@ hr {
 /*
  * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
 */
+/*
 p {
   -webkit-hyphens: auto;
   -epub-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto; }
+
+  */
 
 /*
  * Addresses margins set differently in IE6/7.
@@ -509,6 +512,8 @@ I've edited it a bit, but it's a nice starting point.
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
+/*
+
 p {
   -ms-word-break: break-all;
   -ms-word-wrap: break-all;
@@ -525,6 +530,8 @@ p {
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
+
+*/
 
 /******************************************************************
 Site Name:
