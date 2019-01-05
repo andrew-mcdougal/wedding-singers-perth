@@ -15,6 +15,28 @@
 
 <?php get_header(); ?>
 
+<script>
+
+	document.addEventListener("DOMContentLoaded", function(event) {
+
+function scrollClick() {
+    document.querySelector('.home-content').scrollIntoView({ 
+    behavior: 'smooth',
+    block: "start"
+  });
+}
+
+document.querySelector('.arrow-click').addEventListener('click', function () {
+  console.log("You finally clicked without jQuery");
+  scrollClick();
+});
+
+
+	});
+
+	
+</script>
+
 			<div id="content" class="homepage">
 
 				<div class="home-hero home-hero-mobile" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-13.jpg');">
@@ -22,8 +44,10 @@
 				</div>
 
 				<div class="home-hero home-hero-desktop" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/yws-bw-tint.jpg');">
-					<p>Josh Johnstone is Your Wedding Singer...</p>
-					<i class="fas fa-chevron-down"></i>
+					<div class="home-hero-inner">
+						<p>Josh Johnstone is Your Wedding Singer...</p>
+						<i class="fas fa-chevron-down arrow-click"></i>
+					</div>
 				</div>
 				
 				
@@ -36,7 +60,7 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry-content cf" itemprop="articleBody" style="display: none;">
 
 									<?php
 										// the content (pretty self explanatory huh)
@@ -64,8 +88,8 @@
 								</section>
 
 								<!-- hardcoded for review -->
-								<section class="entry-content cf" itemprop="articleBody">
-									<p>With 20 years experience as a musician, specialising in weddings and corporate events, Josh has performed at over 500 weddings and boasts one of the largest song repertoires in Perth. Rather than using backing tracks, his live solo performance features vocals, acoustic guitar, stomp/beat box and loop pedal, which is paired with top quality audio equipment to produce a full sound that keeps the party on the dance floor where it belongs!</p>
+								<section class="entry-content cf home-content" itemprop="articleBody">
+									<p class="intro-text">With 20 years experience as a musician, specialising in weddings and corporate events, Josh has performed at over 500 weddings and boasts one of the largest song repertoires in Perth. Rather than using backing tracks, his live solo performance features vocals, acoustic guitar, stomp/beat box and loop pedal, which is paired with top quality audio equipment to produce a full sound that keeps the party on the dance floor where it belongs!</p>
 
 									<!-- cards 3 column -->
 									<div class="grid-column grid-column-three">
