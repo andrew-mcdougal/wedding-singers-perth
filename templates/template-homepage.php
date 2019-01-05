@@ -45,10 +45,14 @@ document.querySelector('.arrow-click').addEventListener('click', function () {
 
 				<div class="home-hero home-hero-desktop" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/yws-bw-tint.jpg');">
 					<div class="home-hero-inner">
-						<p>Josh Johnstone is Your Wedding Singer...</p>
+						<div class="typed-strings">
+							<p>Josh Johnstone is Your Wedding Singer...</p>
+						</div>
+						<p class="typed"></p>
 						<i class="fas fa-chevron-down arrow-click"></i>
 					</div>
 				</div>
+
 				
 				
 

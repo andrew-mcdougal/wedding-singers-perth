@@ -35,8 +35,21 @@ console.log('works');
 		});
 	}
 
+	// homepage typed papa
+
+
 	$(document).ready(function() {
 		mobileMenu();
+
+
+var typed = new Typed('.typed', {
+	stringsElement: '.typed-strings',
+	typeSpeed: 80,
+	startDelay: 2000,
+});
+
+
+
 	});
 	
 })( jQuery );

@@ -35,6 +35,9 @@
     p {
       font-family: 'Playfair Display';
       text-align: center;
+      @media all and (min-width: 768px) { 
+        max-width: 40%;
+      }
     }
   }
 
