@@ -259,7 +259,28 @@ add_action( 'get_footer', 'prefix_add_footer_styles' );
 
 
 
-// some text
+// bands post type
+function create_bands() {
+ 
+    register_post_type( 'bands',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Bands' ),
+                'singular_name' => __( 'Band' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'bands'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_bands', 0 );
+
+
+
 
 
 

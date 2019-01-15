@@ -1,5 +1,21 @@
 console.log('works');
 
+// homepage scroll vanilla javascript
+document.addEventListener("DOMContentLoaded", function(event) {
+
+	function scrollClick() {
+	    document.querySelector('.home-content').scrollIntoView({ 
+	    behavior: 'smooth',
+	    block: "start"
+	  });
+	}
+
+	document.querySelector('.arrow-click').addEventListener('click', function () {
+	  console.log("You finally clicked without jQuery");
+	  scrollClick();
+	});
+});
+
 (function($) {
 	
 	// $ Works! You can test it with next line if you like
