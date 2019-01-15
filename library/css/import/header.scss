@@ -103,8 +103,7 @@ $font-heading-logo: 'Great Vibes', cursive;
 
       &:hover,
       &:visited:hover {
-        background: darken($grey, 20%);
-        color: $white;
+        background: lighten($grey, 50%);
       }
     }
 

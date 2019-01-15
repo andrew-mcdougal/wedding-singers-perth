@@ -29,46 +29,63 @@
 
     i, p {
       color: $white;
-      font-size: 3em;
+      font-size: 1.5em;
+    }
+
+    i {
+      cursor: pointer;
+
+      @media all and (min-width: 768px) { 
+        font-size: 3em;
+      }
     }
 
     p {
       font-family: 'Playfair Display';
       text-align: center;
+      
       @media all and (min-width: 768px) { 
         max-width: 40%;
+        font-size: 3em;
       }
     }
-  }
 
-  .home-hero-desktop {
-    display: none;
+    div {
+      width: 100%;
+    }
+
+    .typed-strings {
+      display: none;
+    }
+
+    .typed-para {
+      margin: auto;
+    }
+
+    .typed-two {
+      font-family: $font-heading-logo;
+      font-size: 3em;
+      margin-top: .8em;
+      
+      @media all and (min-width: 768px) { 
+        font-size: 4em;
+      }
+    }
   }
 
   img {
     width: 100%;
     height: auto;
   }
+}
+
+.home-hero-typed {
+  height: 50vh;
 
   @media (min-width: 767px) {
-
-    .home-hero-desktop {
-      display: block;
-    }
-
-    .home-hero-mobile {
-      display: none;
-    }
-  }
-}
-
-.home-hero-mobile {
-  height: 50vh;
-}
-
-.home-hero-desktop {
-  height: 100vh;
-  max-height: 600px;
+    height: 100vh;
+    max-height: 600px;
+  } 
 }
 
 .grid-column {
@@ -105,7 +122,8 @@
 
 
 .button-standard {
-  background: #046BF8;
+  background: #046BF8; // blue
+  background: #FFA904; // orange
   color: $white;
   padding: 1em;
   display: inline-block;
@@ -115,6 +133,7 @@
   &:hover {
     color: $white;
     background: darken(#046BF8,5%);
+    background: darken(#FFA904,5%);
   }
 }
 

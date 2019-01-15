@@ -19,8 +19,20 @@ h5,
 h6 {
   font-family: "Playfair Display", serif; }
 
+#content {
+  background: whitesmoke; }
+
 #inner-content.wrap {
-  margin-top: 2em; }
+  margin-top: 0;
+  border: none;
+  width: 100%; }
+  @media all and (min-width: 768px) {
+    #inner-content.wrap {
+      max-width: 1040px; } }
+  #inner-content.wrap .hentry {
+    border: none;
+    border-radius: 0;
+    margin: 0; }
 
 .entry-content p {
   line-height: 150%; }
@@ -76,8 +88,7 @@ footer p {
       .nav li a:visited:hover, .nav li a:visited:focus, .nav li a:link, .nav li a:visited:link {
         color: #757575; }
       .nav li a:hover, .nav li a:visited:hover {
-        background: #424242;
-        color: #FFF; }
+        background: whitesmoke; }
     .nav li.menu-item-has-children .fa {
       position: absolute;
       z-index: 100;
@@ -170,30 +181,42 @@ footer p {
       justify-content: space-evenly; }
     #content.homepage .home-hero i, #content.homepage .home-hero p {
       color: #FFF;
-      font-size: 3em; }
+      font-size: 1.5em; }
+    #content.homepage .home-hero i {
+      cursor: pointer; }
+      @media all and (min-width: 768px) {
+        #content.homepage .home-hero i {
+          font-size: 3em; } }
     #content.homepage .home-hero p {
       font-family: 'Playfair Display';
       text-align: center; }
       @media all and (min-width: 768px) {
         #content.homepage .home-hero p {
-          max-width: 40%; } }
-  #content.homepage .home-hero-desktop {
-    display: none; }
+          max-width: 40%;
+          font-size: 3em; } }
+    #content.homepage .home-hero div {
+      width: 100%; }
+    #content.homepage .home-hero .typed-strings {
+      display: none; }
+    #content.homepage .home-hero .typed-para {
+      margin: auto; }
+    #content.homepage .home-hero .typed-two {
+      font-family: "Great Vibes", cursive;
+      font-size: 3em;
+      margin-top: .8em; }
+      @media all and (min-width: 768px) {
+        #content.homepage .home-hero .typed-two {
+          font-size: 4em; } }
   #content.homepage img {
     width: 100%;
     height: auto; }
-  @media (min-width: 767px) {
-    #content.homepage .home-hero-desktop {
-      display: block; }
-    #content.homepage .home-hero-mobile {
-      display: none; } }
 
-.home-hero-mobile {
+.home-hero-typed {
   height: 50vh; }
-
-.home-hero-desktop {
-  height: 100vh;
-  max-height: 600px; }
+  @media (min-width: 767px) {
+    .home-hero-typed {
+      height: 100vh;
+      max-height: 600px; } }
 
 .grid-column {
   display: block; }
@@ -214,6 +237,7 @@ footer p {
 
 .button-standard {
   background: #046BF8;
+  background: #FFA904;
   color: #FFF;
   padding: 1em;
   display: inline-block;
@@ -221,7 +245,8 @@ footer p {
   border-radius: 50px; }
   .button-standard:hover {
     color: #FFF;
-    background: #0460df; }
+    background: #0460df;
+    background: #ea9900; }
 
 .card-1 .button-standard {
   margin: 0 1em 1em; }

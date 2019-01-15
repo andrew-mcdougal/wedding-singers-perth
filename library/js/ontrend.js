@@ -36,18 +36,37 @@ console.log('works');
 	}
 
 	// homepage typed papa
+	function typedOne() {
+		var typed = new Typed('.typed-one', {
+			stringsElement: '.typed-strings-one',
+			typeSpeed: 80,
+			startDelay: 2000,
+			showCursor: false,
+
+			onComplete: (self) => {
+				typedTwo();
+			},
+		});
+	}
+
+	function typedTwo() {
+		var typed = new Typed('.typed-two', {
+			stringsElement: '.typed-strings-two',
+			typeSpeed: 80,
+			startDelay: 1000,
+			showCursor: false,
+		});
+	}
 
 
 	$(document).ready(function() {
 		mobileMenu();
+		typedOne({
+
+		});
 
 
-var typed = new Typed('.typed', {
-	stringsElement: '.typed-strings',
-	typeSpeed: 80,
-	startDelay: 2000,
-	showCursor: false,
-});
+
 
 
 

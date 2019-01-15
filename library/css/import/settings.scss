@@ -43,8 +43,24 @@ h6 {
 
 
 // pages
+#content {
+	background: lighten($grey, 50%);
+}
+
 #inner-content.wrap {
-    margin-top: 2em;
+    margin-top: 0;
+    border: none;
+    width: 100%;
+
+    @media all and (min-width: 768px) { 
+    	max-width: 1040px;
+    }
+
+    .hentry {
+    	border: none;
+    	border-radius: 0;
+    	margin: 0;
+    }
 }
 
 .entry-content {

@@ -39,16 +39,18 @@ document.querySelector('.arrow-click').addEventListener('click', function () {
 
 			<div id="content" class="homepage">
 
-				<div class="home-hero home-hero-mobile" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2018/12/image-13.jpg');">
-					<p>Mobile version</p>
-				</div>
-
-				<div class="home-hero home-hero-desktop" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/yws-bw-tint.jpg');">
+				<div class="home-hero home-hero-typed" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/yws-bw-tint.jpg');">
 					<div class="home-hero-inner">
-						<div class="typed-strings">
-							<p>Josh Johnstone is Your Wedding Singer...</p>
+						<span class="typed-strings typed-strings-one">
+							<p>Josh Johnstone is</p>
+						</span>
+						<span class="typed-strings typed-strings-two">
+							<p>Your Wedding Singer</p>
+						</span>
+						<div>
+							<p class="typed-para typed-one"></p>
+							<p class="typed-para typed-two"></p>
 						</div>
-						<p class="typed"></p>
 						<i class="fas fa-chevron-down arrow-click"></i>
 					</div>
 				</div>
