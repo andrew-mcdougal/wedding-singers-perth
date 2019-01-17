@@ -16,14 +16,12 @@
 
 							<article class="hentry" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								<header class="article-header">
+									<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );} ?>
 	                <h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
 	              </header>
               
               	<section class="entry-content cf home-content intro-text" itemprop="articleBody">
 									<?php the_field('intro_text'); ?>
-								</section>
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php the_content(); ?>
 								</section>
 								<section class="entry-content cf" itemprop="articleBody">
 									<div class="grid-column grid-column-three">
@@ -45,6 +43,9 @@
 										</div>
 										<?php endwhile; wp_reset_query(); ?>
 									</div>
+								</section>
+								<section class="entry-content cf" itemprop="articleBody">
+									<?php the_content(); ?>
 								</section>
 							</article>
 
