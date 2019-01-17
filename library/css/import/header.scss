@@ -81,7 +81,8 @@ $font-heading-logo: 'Great Vibes', cursive;
     max-height: 100vh;
   }
 
-  li {
+  li,
+  ul.sub-menu li {
     position: relative;
     border-top: 1px solid rgba($grey, 0.2);
 
@@ -140,6 +141,14 @@ $font-heading-logo: 'Great Vibes', cursive;
           padding-left: 40px;
         }
       }
+    }
+  }
+
+  ul.sub-menu {
+    
+    li {
+      background: $white;
+      border: none;
     }
   }
 }
