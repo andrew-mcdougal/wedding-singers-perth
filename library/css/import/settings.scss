@@ -23,13 +23,18 @@ body {
   font-family: $font-body;
 }
 
+a, a:visited { color: $primary; }
+
+a:hover, a:focus, a:visited:hover, a:visited:focus { color: $secondary; }
+a:link, a:visited:link { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
 p {
 	margin-top: 0;
 	line-height: 120%;
+}
 
-    &.intro-text {
-        font-size: 1.3em;
-    }
+.intro-text p {
+    font-size: 1.3em;
 }
 
 h1,
@@ -45,6 +50,7 @@ h6 {
 // pages
 #content {
 	background: lighten($grey, 50%);
+    margin-top: 0;
 }
 
 #inner-content.wrap {
@@ -58,8 +64,9 @@ h6 {
 
     .hentry {
     	border: none;
-    	border-radius: 0;
+    	border-radius: 5px;
     	margin: 0;
+        margin-top: 1.5em;
     }
 }
 

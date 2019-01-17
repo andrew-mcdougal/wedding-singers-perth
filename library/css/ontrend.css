@@ -5,11 +5,21 @@ body {
   line-height: 120%;
   font-family: "Fanwood Text", sans-serif; }
 
+a, a:visited {
+  color: #231F20; }
+
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #ad974f; }
+
+a:link, a:visited:link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
 p {
   margin-top: 0;
   line-height: 120%; }
-  p.intro-text {
-    font-size: 1.3em; }
+
+.intro-text p {
+  font-size: 1.3em; }
 
 h1,
 h2,
@@ -20,7 +30,8 @@ h6 {
   font-family: "Playfair Display", serif; }
 
 #content {
-  background: whitesmoke; }
+  background: whitesmoke;
+  margin-top: 0; }
 
 #inner-content.wrap {
   margin-top: 0;
@@ -31,8 +42,9 @@ h6 {
       max-width: 1040px; } }
   #inner-content.wrap .hentry {
     border: none;
-    border-radius: 0;
-    margin: 0; }
+    border-radius: 5px;
+    margin: 0;
+    margin-top: 1.5em; }
 
 .entry-content p {
   line-height: 150%; }
@@ -89,6 +101,8 @@ footer p {
         color: #757575; }
       .nav li a:hover, .nav li a:visited:hover {
         background: whitesmoke; }
+    .nav li.current-menu-item a {
+      background: whitesmoke; }
     .nav li.menu-item-has-children .fa {
       position: absolute;
       z-index: 100;
@@ -231,9 +245,18 @@ footer p {
   border-radius: 4px;
   margin: 0 auto 1em;
   display: grid;
-  grid-template-rows: auto 1fr auto; }
+  grid-template-rows: auto 1fr auto;
+  background-color: #FFF;
+  overflow: hidden;
+  max-width: 320px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.48);
+  text-align: center;
+  transition: all .2s ease-out; }
+  .card:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.48); }
   .card img {
-    margin: 0; }
+    margin: 0;
+    max-width: 100%; }
 
 .button-standard {
   background: #046BF8;
@@ -241,33 +264,20 @@ footer p {
   color: #FFF;
   padding: 1em;
   display: inline-block;
-  margin-bottom: 1em;
-  border-radius: 50px; }
+  margin: 0 1em 1em;
+  border-radius: 50px;
+  text-decoration: none; }
+  .button-standard:visited, .button-standard:hover, .button-standard:visited:hover {
+    color: #FFF; }
   .button-standard:hover {
-    color: #FFF;
     background: #0460df;
     background: #ea9900; }
 
-.card-1 .button-standard {
-  margin: 0 1em 1em; }
-
-.card-1 {
-  background-color: #fff;
-  overflow: hidden;
-  max-width: 320px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.48);
-  text-align: center;
-  transition: all .2s ease-out; }
-  .card-1:hover {
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.48); }
-  .card-1 img {
-    max-width: 100%; }
-
-.card-1-content {
+.card-content {
   position: relative;
   z-index: 1;
   padding: 0 1em; }
-  .card-1-content:before {
+  .card-content:before {
     content: '';
     width: 200%;
     height: 100px;
@@ -278,7 +288,7 @@ footer p {
     top: -60px;
     left: -10%;
     z-index: -1; }
-  .card-1-content h3 {
+  .card-content h3 {
     font-family: "Playfair Display", serif;
     font-weight: 800;
     margin: 0 0 .5em 0;

@@ -107,6 +107,11 @@ $font-heading-logo: 'Great Vibes', cursive;
       }
     }
 
+    // current item
+    &.current-menu-item a {
+      background: lighten($grey, 50%);
+    }
+
     // has sub nav
     &.menu-item-has-children {
 
