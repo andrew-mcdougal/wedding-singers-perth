@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display|Fanwood+Text|Questrial|Acme|Open+Sans:400,800);
+
 $white: #FFF;
 $primary: #231F20;
 $primary-lite: lighten($primary, 20%);
@@ -8,12 +10,17 @@ $secondary-lite: lighten($secondary, 20%);
 $secondary-liter: lighten($secondary, 40%);
 
 $grey: #757575;
+$grey-light: lighten($grey, 40%);
+
+$blue: #046BF8;
+$orange: #FFA904;
 
 
 $font-heading-logo: 'Great Vibes', cursive;
 $font-headings: 'Playfair Display', serif;
 $font-body: 'Fauna One', sans-serif;
 $font-body: 'Fanwood Text', sans-serif;
+$font-body: 'Open Sans', sans-serif;
 
 
 // settings
@@ -21,6 +28,7 @@ body {
   font-size: 18px;
   line-height: 120%;
   font-family: $font-body;
+  color: $primary;
 }
 
 a, a:visited { color: $primary; }
@@ -48,7 +56,7 @@ h6 {
 
 // pages
 #content {
-	background: lighten($grey, 50%);
+	background: $grey-light;
     margin-top: 0;
 }
 
@@ -58,13 +66,17 @@ h6 {
     width: 100%;
 
     @media all and (min-width: 768px) { 
-    	max-width: 1040px;
+    	max-width: 1234px;
     }
 
     .hentry {
     	border: none;
     	border-radius: 5px;
         margin: 1.5em 0;
+
+        .article-header {
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -83,6 +95,47 @@ h6 {
         box-shadow: none;
         height: 1px;
         background: lighten($primary, 60%);
+    }
+}
+
+// contact page
+.contact-page {
+    
+    > div {
+        padding: 2em;
+    }
+
+    p {
+        margin: 1.5em 0 .25em 0;
+    }
+
+    .wpcf7-form-control-wrap {
+        margin-top: .5em;
+    }
+
+    .wpcf7-list-item {
+        display: block;
+        padding: .25em 0;
+    }
+
+    .wpcf7-submit {
+        @include button-standard;
+        display: block;
+        max-width: none;
+        width: 100%;
+        border: none;
+        margin: 0;
+    }
+
+    input,
+    textarea {
+        max-width: 100%;
+        padding: .5em;
+        background: lighten($blue, 40%);
+
+        &:focus {
+            background: lighten($blue, 45%);;
+        }
     }
 }
 

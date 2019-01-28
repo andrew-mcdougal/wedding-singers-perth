@@ -266,12 +266,12 @@ function create_bands() {
     // CPT Options
         array(
             'labels' => array(
-                'name' => __( 'Bands' ),
-                'singular_name' => __( 'Band' )
+                'name' => __( 'Packages' ),
+                'singular_name' => __( 'Package' )
             ),
             'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'bands'),
+            'has_archive' => false,
+            'rewrite' => array('slug' => 'packages'),
             'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
         )
     );

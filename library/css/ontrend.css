@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,800);
-@import url(https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display|Fanwood+Text);
+@import url(https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display|Fanwood+Text|Questrial|Acme|Open+Sans:400,800);
 body {
   font-size: 18px;
   line-height: 120%;
-  font-family: "Fanwood Text", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  color: #231F20; }
 
 a, a:visited {
   color: #231F20; }
@@ -30,7 +30,7 @@ h6 {
   font-family: "Playfair Display", serif; }
 
 #content {
-  background: whitesmoke;
+  background: #dbdbdb;
   margin-top: 0; }
 
 #inner-content.wrap {
@@ -39,11 +39,13 @@ h6 {
   width: 100%; }
   @media all and (min-width: 768px) {
     #inner-content.wrap {
-      max-width: 1040px; } }
+      max-width: 1234px; } }
   #inner-content.wrap .hentry {
     border: none;
     border-radius: 5px;
     margin: 1.5em 0; }
+    #inner-content.wrap .hentry .article-header {
+      padding-bottom: 0; }
 
 .entry-content p {
   line-height: 150%; }
@@ -54,6 +56,43 @@ h6 {
   box-shadow: none;
   height: 1px;
   background: #beb6b8; }
+
+.contact-page > div {
+  padding: 2em; }
+.contact-page p {
+  margin: 1.5em 0 .25em 0; }
+.contact-page .wpcf7-form-control-wrap {
+  margin-top: .5em; }
+.contact-page .wpcf7-list-item {
+  display: block;
+  padding: .25em 0; }
+.contact-page .wpcf7-submit {
+  background: #FFA904;
+  background: #046BF8;
+  color: #FFF;
+  padding: 1em;
+  display: inline-block;
+  margin: 0 1em 1em;
+  border-radius: 50px;
+  text-decoration: none;
+  display: block;
+  max-width: none;
+  width: 100%;
+  border: none;
+  margin: 0; }
+  .contact-page .wpcf7-submit:visited, .contact-page .wpcf7-submit:hover, .contact-page .wpcf7-submit:visited:hover {
+    color: #FFF; }
+  .contact-page .wpcf7-submit:hover {
+    background: #ea9900;
+    background: #0460df; }
+.contact-page input,
+.contact-page textarea {
+  max-width: 100%;
+  padding: .5em;
+  background: #cae0fe; }
+  .contact-page input:focus,
+  .contact-page textarea:focus {
+    background: #e3efff; }
 
 footer p {
   margin-top: 1em;
@@ -268,7 +307,15 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
-    margin-bottom: 2em; } }
+    margin-bottom: 2em; }
+
+  .grid-column-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em; }
+
+  .grid-column-no-margin {
+    margin-bottom: 0; } }
 .card {
   border-radius: 4px;
   margin: 0 auto 1em;
@@ -276,7 +323,7 @@ footer p {
   grid-template-rows: auto 1fr auto;
   background-color: #FFF;
   overflow: hidden;
-  max-width: 320px;
+  max-width: 450px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.48);
   text-align: center;
   transition: all .2s ease-out; }
@@ -287,8 +334,8 @@ footer p {
     max-width: 100%; }
 
 .button-standard {
-  background: #046BF8;
   background: #FFA904;
+  background: #046BF8;
   color: #FFF;
   padding: 1em;
   display: inline-block;
@@ -298,8 +345,8 @@ footer p {
   .button-standard:visited, .button-standard:hover, .button-standard:visited:hover {
     color: #FFF; }
   .button-standard:hover {
-    background: #0460df;
-    background: #ea9900; }
+    background: #ea9900;
+    background: #0460df; }
 
 .card-content {
   position: relative;
@@ -321,5 +368,10 @@ footer p {
     font-weight: 800;
     margin: 0 0 .5em 0;
     font-size: 1.5em; }
+  .card-content li {
+    list-style: none;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 1em;
+    text-align: left; }
 
 /*# sourceMappingURL=ontrend.css.map */

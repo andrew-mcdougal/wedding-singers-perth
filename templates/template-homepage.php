@@ -62,7 +62,7 @@ document.querySelector('.arrow-click').addEventListener('click', function () {
 									<?php the_field('intro_text'); ?>
 								</section>
 								<section class="entry-content cf" itemprop="articleBody">
-									<div class="grid-column grid-column-three">
+									<div class="grid-column grid-column-three grid-column-no-margin">
 									<?php
 									$loop = new WP_Query( array(
 										'post_type' => 'bands',
