@@ -1,0 +1,12 @@
+.package-image {
+  position: relative;
+  height: 50vh;
+  margin: 2em 0;
+
+  background: red;
+
+  @media (min-width: 767px) {
+    height: 100vh;
+    max-height: 600px;
+  }
+}
