@@ -7,6 +7,7 @@
                 <header class="article-header">
                   <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );} ?>
                   <h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
+                  <?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
                 </header>
                 <section class="entry-content cf">
                   <?php the_content(); ?>

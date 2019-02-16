@@ -249,8 +249,14 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 // ONTREND FUNCTIONS
 
 function prefix_add_footer_styles() {
-  wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/ontrend.js?v=1' );
+  // javascript
+  wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/library/js/slick/slick.min.js' );
   wp_enqueue_script( 'typed-js', get_stylesheet_directory_uri() . '/library/js/libs/typed.min.js' );
+  wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/ontrend.js?v=1' );
+
+  
+  // css
+  wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/library/js/slick/slick.css' );
   wp_enqueue_style( 'hamburger-css', get_stylesheet_directory_uri() . '/library/css/hamburgers/hamburgers.css' );
   wp_enqueue_style( 'ontrend-css', get_stylesheet_directory_uri() . '/library/css/ontrend.css?v=3' );
 };
@@ -281,7 +287,8 @@ add_action( 'init', 'create_bands', 0 );
 
 
 
-
+// image sizes
+add_image_size( 'square-size', 500, 500, array( 'center', 'top' ) ); // Hard crop center top
 
 
 

@@ -74,12 +74,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		});
 	}
 
+	// homepage slider
+	function homeSlider() {
+		$('.home-slider').slick({
+			arrows: false,
+			autoplay: true,
+			fade: true,
+			//autoplaySpeed: 1000,
+		});	
+	}
+	
+
 
 	$(document).ready(function() {
 		mobileMenu();
 		typedOne({
 
 		});
+		homeSlider();
 
 
 
