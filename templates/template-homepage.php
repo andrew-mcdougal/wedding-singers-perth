@@ -40,26 +40,29 @@ document.querySelector('.arrow-click').addEventListener('click', function () {
 			<div id="content" class="homepage">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+
+<!-- home slider -->
 <?php if( have_rows('home_images') ): ?>
 
-	<ul class="home-slider">
+	<div class="home-slider-new">
 
 	<?php while( have_rows('home_images') ): the_row(); 
 		// vars
 		$image = get_sub_field('image');
 ?>
 
-		<li class="slide">
-			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-		</li>
+		<div class="slide">
+			<div class="image" style="background-image: url('<?php echo $image["url"]; ?>'"></div>
+		</div>
 
 	<?php endwhile; ?>
 
-	</ul>
+	</div>
 
 <?php endif; ?>
+<!-- home slider -->
 
-				<div class="home-hero home-hero-typed" style="background-image: url('<?php echo the_post_thumbnail_url('full'); ?>">
+				<div class="home-hero home-hero-typed">
 				<?php endwhile; endif;?>
 					<div class="home-hero-inner">
 						<span class="typed-strings typed-strings-one">

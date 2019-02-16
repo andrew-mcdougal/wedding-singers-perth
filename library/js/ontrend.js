@@ -76,10 +76,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	// homepage slider
 	function homeSlider() {
-		$('.home-slider').slick({
+		$('.home-slider-new').slick({
 			arrows: false,
 			autoplay: true,
 			fade: true,
+			speed: 3000
 			//autoplaySpeed: 1000,
 		});	
 	}
