@@ -47,7 +47,7 @@ if( have_rows('testimonials') ):
 			echo '<img src="' . $imageDefault . '" />';	
 		}
 
-		echo '<p>' . $content . '</p>';
+		echo $content;
 
 		echo '<h4>' . $name . '</h4>';
 		echo '<small>' . $extra . '</small>';

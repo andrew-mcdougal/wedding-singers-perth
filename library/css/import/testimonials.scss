@@ -1,0 +1,47 @@
+.testimonials-container {
+    text-align: center;
+
+    div {
+        border-top: 1px solid rgba($grey, 0.2);
+        padding: 1em;
+        margin-bottom: 2em;
+
+        &:first-child {
+            border: none;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 1em auto 0;
+
+            &:before {
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f10d";
+                font-size: 3em;
+                position: relative;
+                left: -1rem;
+                top: -1rem;
+                color: lighten($grey, 20%);
+            }
+        }
+
+        h4 {
+            margin-bottom: .25em;
+        }
+
+        small {
+            text-transform: uppercase;
+        }
+    }
+
+
+
+    img {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 50%;
+        filter: grayscale(50%);
+        margin: 0;
+    }
+}
