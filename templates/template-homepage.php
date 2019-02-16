@@ -38,8 +38,29 @@ document.querySelector('.arrow-click').addEventListener('click', function () {
 </script>
 
 			<div id="content" class="homepage">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<div class="home-hero home-hero-typed" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/yws-bw-tint.jpg');">
+<?php if( have_rows('home_images') ): ?>
+
+	<ul class="home-slider">
+
+	<?php while( have_rows('home_images') ): the_row(); 
+		// vars
+		$image = get_sub_field('image');
+?>
+
+		<li class="slide">
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+		</li>
+
+	<?php endwhile; ?>
+
+	</ul>
+
+<?php endif; ?>
+
+				<div class="home-hero home-hero-typed" style="background-image: url('<?php echo the_post_thumbnail_url('full'); ?>">
+				<?php endwhile; endif;?>
 					<div class="home-hero-inner">
 						<span class="typed-strings typed-strings-one">
 							<p>Josh Johnstone is</p>
@@ -62,26 +83,7 @@ document.querySelector('.arrow-click').addEventListener('click', function () {
 									<?php the_field('intro_text'); ?>
 								</section>
 								<section class="entry-content cf" itemprop="articleBody">
-									<div class="grid-column grid-column-three">
-									<?php
-									$loop = new WP_Query( array(
-										'post_type' => 'bands',
-										'posts_per_page' => -1
-										)
-									);
-									while ( $loop->have_posts() ) : $loop->the_post(); ?>
-										<div class="card">
-											<?php if ( has_post_thumbnail() ) {the_post_thumbnail('full');} ?>
-
-											<div class="card-content">
-												<h3><?php the_title(); ?></h3>
-												<p><?php the_content(); ?></p>
-											</div>
-											<a class="button-standard" href="<?php echo get_permalink(); ?>"><i class="fas fa-info-circle"></i> Find out more</a>
-										</div>
-										<?php endwhile; wp_reset_query(); ?>
-									</div>
-								</section>
+									<?php get_template_part( 'template-parts/packages' ); ?>
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section>

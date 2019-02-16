@@ -1,0 +1,22 @@
+@mixin button-standard {
+  background: $orange; // orange
+  background: $blue; // blue
+  
+  color: $white;
+  padding: 1em;
+  display: inline-block;
+  margin: 0 1em 1em;
+  border-radius: 50px;
+  text-decoration: none;
+
+  &:visited,
+  &:hover,
+  &:visited:hover {
+    color: $white;
+  }
+
+  &:hover {
+    background: darken($orange,5%);
+    background: darken($blue,5%);
+  }
+}

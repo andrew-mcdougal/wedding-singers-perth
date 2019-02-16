@@ -6,7 +6,7 @@
 
   background-color: $white;
   overflow: hidden;
-  max-width: 320px;
+  max-width: 450px;
   box-shadow: 0px 5px 5px rgba( 0, 0, 0, 0.48 );
   text-align: center;
   transition: all .2s ease-out;
@@ -22,25 +22,7 @@
 }
 
 .button-standard {
-  background: #046BF8; // blue
-  background: #FFA904; // orange
-  color: $white;
-  padding: 1em;
-  display: inline-block;
-  margin: 0 1em 1em;
-  border-radius: 50px;
-  text-decoration: none;
-
-  &:visited,
-  &:hover,
-  &:visited:hover {
-    color: $white;
-  }
-
-  &:hover {
-    background: darken(#046BF8,5%);
-    background: darken(#FFA904,5%);
-  }
+  @include button-standard;
 }
 
 .card-content{
@@ -61,10 +43,25 @@
     z-index: -1;
   }
 
+  p {
+    font-weight: 600;
+  }
+
   h3 {
     font-family: $font-headings;
     font-weight: 800;
     margin: 0 0 .5em 0;
     font-size: 1.5em;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid $grey-light;
+    padding: 1em;
+    text-align: left;
+
+    &:first-child {
+      border-top: 1px solid $grey-light;
+    }
   }
 }
