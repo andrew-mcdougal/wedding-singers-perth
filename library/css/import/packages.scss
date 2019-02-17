@@ -1,12 +1,55 @@
 .package-image {
   position: relative;
   height: 50vh;
-  margin: 2em 0;
+  margin: 2em 0 0;
 
-  background: red;
+  background-size:cover;
 
   @media (min-width: 767px) {
     height: 100vh;
-    max-height: 600px;
+    max-height: 350px;
   }
+}
+
+
+.packages-single {
+
+    h3 {
+        font-size: 2.5em;
+    }
+
+    .tagline {
+        font-weight: 700;
+    }
+
+    ul {
+
+        li {
+            list-style: none;
+            margin: 1em 0 1em 1em;
+            font-size: 1.2em;
+
+            &:before {
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f00c";
+                font-size: 1em;
+                position: relative;
+                left: -.5em;
+                color: #8AAB0B;
+            }
+        }
+    }
+
+    // form
+    .wpcf7 {
+        max-width: 600px;
+        width: 100%;
+        margin-top: 2em;
+        border-top: 1px solid $grey-light;
+
+        input {
+            max-width: none;
+        }
+    }
 }

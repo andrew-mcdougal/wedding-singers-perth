@@ -57,18 +57,19 @@ h6 {
   border: none;
   box-shadow: none;
   height: 1px;
-  background: #beb6b8; }
+  background: #dbdbdb; }
 
 .contact-page > div {
   padding: 2em; }
 .contact-page p {
   margin: 1.5em 0 .25em 0; }
-.contact-page .wpcf7-form-control-wrap {
+
+.wpcf7 .wpcf7-form-control-wrap {
   margin-top: .5em; }
-.contact-page .wpcf7-list-item {
+.wpcf7 .wpcf7-list-item {
   display: block;
   padding: .25em 0; }
-.contact-page .wpcf7-submit {
+.wpcf7 .wpcf7-submit {
   background: #FFA904;
   background: #046BF8;
   color: #FFF;
@@ -82,18 +83,18 @@ h6 {
   width: 100%;
   border: none;
   margin: 0; }
-  .contact-page .wpcf7-submit:visited, .contact-page .wpcf7-submit:hover, .contact-page .wpcf7-submit:visited:hover {
+  .wpcf7 .wpcf7-submit:visited, .wpcf7 .wpcf7-submit:hover, .wpcf7 .wpcf7-submit:visited:hover {
     color: #FFF; }
-  .contact-page .wpcf7-submit:hover {
+  .wpcf7 .wpcf7-submit:hover {
     background: #ea9900;
     background: #0460df; }
-.contact-page input,
-.contact-page textarea {
+.wpcf7 input,
+.wpcf7 textarea {
   max-width: 100%;
   padding: .5em;
   background: #cae0fe; }
-  .contact-page input:focus,
-  .contact-page textarea:focus {
+  .wpcf7 input:focus,
+  .wpcf7 textarea:focus {
     background: #e3efff; }
 
 footer p {
@@ -461,11 +462,35 @@ footer p {
 .package-image {
   position: relative;
   height: 50vh;
-  margin: 2em 0;
-  background: red; }
+  margin: 2em 0 0;
+  background-size: cover; }
   @media (min-width: 767px) {
     .package-image {
       height: 100vh;
-      max-height: 600px; } }
+      max-height: 350px; } }
+
+.packages-single h3 {
+  font-size: 2.5em; }
+.packages-single .tagline {
+  font-weight: 700; }
+.packages-single ul li {
+  list-style: none;
+  margin: 1em 0 1em 1em;
+  font-size: 1.2em; }
+  .packages-single ul li:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 1em;
+    position: relative;
+    left: -.5em;
+    color: #8AAB0B; }
+.packages-single .wpcf7 {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 2em;
+  border-top: 1px solid #dbdbdb; }
+  .packages-single .wpcf7 input {
+    max-width: none; }
 
 /*# sourceMappingURL=ontrend.css.map */

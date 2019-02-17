@@ -98,7 +98,7 @@ h6 {
         border: none;
         box-shadow: none;
         height: 1px;
-        background: lighten($primary, 60%);
+        background: $grey-light;
     }
 }
 
@@ -112,7 +112,10 @@ h6 {
     p {
         margin: 1.5em 0 .25em 0;
     }
+}
 
+
+.wpcf7 {
     .wpcf7-form-control-wrap {
         margin-top: .5em;
     }
@@ -142,6 +145,7 @@ h6 {
         }
     }
 }
+    
 
 footer {
 
