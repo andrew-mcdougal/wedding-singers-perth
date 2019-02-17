@@ -292,7 +292,10 @@ add_image_size( 'square-size', 500, 500, array( 'center', 'top' ) ); // Hard cro
 
 
 
-
+// ACF options page
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(); 
+}
 
 
 
