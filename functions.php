@@ -258,7 +258,7 @@ function prefix_add_footer_styles() {
   // css
   wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/library/js/slick/slick.css' );
   wp_enqueue_style( 'hamburger-css', get_stylesheet_directory_uri() . '/library/css/hamburgers/hamburgers.css' );
-  wp_enqueue_style( 'ontrend-css', get_stylesheet_directory_uri() . '/library/css/ontrend.css?v=3' );
+  wp_enqueue_style( 'ontrend-css', get_stylesheet_directory_uri() . '/library/css/ontrend.css?v=4' );
 };
 add_action( 'get_footer', 'prefix_add_footer_styles' );
 

@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		$('.home-slider-new').slick({
 			arrows: false,
 			autoplay: true,
+			autoplaySpeed: 3000,
 			fade: true,
 			speed: 3000
-			//autoplaySpeed: 1000,
 		});	
 	}
 	
