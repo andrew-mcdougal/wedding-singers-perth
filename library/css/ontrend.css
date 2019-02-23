@@ -354,10 +354,10 @@ footer p {
 .image {
   position: absolute;
   background-size: cover;
-  top: -5%;
-  left: -5%;
-  width: 110%;
-  height: 110%;
+  top: -1%;
+  left: -1%;
+  width: 105%;
+  height: 105%;
   transition: width 1s, height 1s, top 1s, left 1s;
   transition: all 7s ease-out; }
   .slick-active .image {
@@ -413,6 +413,8 @@ footer p {
     top: -60px;
     left: -10%;
     z-index: -1; }
+  .card-content .wpcf7 {
+    display: none; }
   .card-content p {
     font-weight: 600; }
   .card-content h3 {
