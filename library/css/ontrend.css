@@ -2,7 +2,7 @@
 body {
   font-size: 18px;
   line-height: 120%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
   color: #231F20; }
 
 a, a:visited {
@@ -494,5 +494,23 @@ footer p {
   border-top: 1px solid #dbdbdb; }
   .packages-single .wpcf7 input {
     max-width: none; }
+
+.band-grid {
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 1em; }
+  .band-grid img {
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%; }
+
+@media all and (min-width: 767px) {
+  .band-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 1em;
+    margin-bottom: 2em; }
+    .band-grid img {
+      border-radius: 5px;
+      max-width: none; } }
 
 /*# sourceMappingURL=ontrend.css.map */
