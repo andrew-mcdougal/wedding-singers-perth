@@ -24,12 +24,38 @@ $font-body: 'Open Sans', sans-serif;
 $font-body: 'Playfair Display', serif;
 
 
+// page transitions
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.js .transition {
+    opacity: 0;
+}
+
+
+.loaded .transition {
+    
+    animation-duration: .25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+
 // settings
 body {
   font-size: 18px;
   line-height: 120%;
   font-family: $font-body;
   color: $primary;
+  background: #000;
 }
 
 a, a:visited { color: $primary; }
@@ -103,6 +129,30 @@ h6 {
     }
 }
 
+// grid templates
+.grid-column {
+  display: block;
+}
+
+@media all and (min-width: 768px) {
+  .grid-column-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 2em;
+  }
+
+  .grid-column-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+
+  .grid-column-no-margin {
+    margin-bottom: 0;
+  }
+}
+
 // contact page
 .contact-page {
     
@@ -144,6 +194,14 @@ h6 {
         &:focus {
             background: lighten($blue, 45%);;
         }
+    }
+
+    .wpcf7-response-output {
+        border-radius: 5px;
+        border-color: $primary;
+        text-align: center;
+        padding: 1em;
+        margin-top: .5em;
     }
 }
     

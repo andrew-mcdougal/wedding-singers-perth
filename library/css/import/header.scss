@@ -75,7 +75,6 @@ $font-heading-logo: 'Great Vibes', cursive;
 .nav {
   max-height: 0;
   overflow: hidden;
-  transition: all .4s ease-in;
 
   &.show-menu {
     max-height: 100vh;
@@ -88,6 +87,7 @@ $font-heading-logo: 'Great Vibes', cursive;
 
     a {
       font-size: .9em;
+      transition: background-color .4s ease-in;
 
       color: $primary;
       text-transform: uppercase;
@@ -104,7 +104,7 @@ $font-heading-logo: 'Great Vibes', cursive;
 
       &:hover,
       &:visited:hover {
-        background: lighten($grey, 50%);
+        background-color: lighten($grey, 50%);
       }
     }
 

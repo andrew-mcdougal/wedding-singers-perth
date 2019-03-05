@@ -83,32 +83,6 @@
 }
 
 
-
-
-.grid-column {
-  display: block;
-}
-
-@media all and (min-width: 768px) {
-  .grid-column-three {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
-    margin-bottom: 2em;
-  }
-
-  .grid-column-two {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-  }
-
-  .grid-column-no-margin {
-    margin-bottom: 0;
-  }
-}
-
-
 // slider
 #content.homepage {
 

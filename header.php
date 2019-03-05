@@ -13,6 +13,12 @@
 
 		<title><?php wp_title(''); ?></title>
 
+        <style>
+            .js .transition {
+                opacity: 0;
+            }
+        </style>
+
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
@@ -42,7 +48,7 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-		<div id="container">
+		<div id="container" class="transition">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
