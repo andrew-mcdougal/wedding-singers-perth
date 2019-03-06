@@ -42,6 +42,16 @@
 		<?php // end of wordpress head ?>
 
 		<?php // drop Google Analytics Here ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50801394-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-50801394-3');
+    </script>
+
 		<?php // end analytics ?>
 
 	</head>
