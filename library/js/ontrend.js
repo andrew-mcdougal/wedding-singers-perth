@@ -1,23 +1,3 @@
-// page transition with smoothState
-;(function ($) {
-  'use strict';
-  var content  = $('#container').smoothState({
-        // onStart runs as soon as link has been activated
-        onStart : {
-          
-          // Set the duration of our animation
-          duration: 250,
-          
-          // Alterations to the page
-          render: function () {
-
-            // Quickly toggles a class and restarts css animations
-            //content.toggleAnimationClass('is-exiting');
-          }
-        }
-      }).data('smoothState'); // makes public methods available
-})(jQuery);
-
 // homepage scroll vanilla javascript
 document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -33,10 +13,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  });
 	}
 
-	document.querySelector('.arrow-click').addEventListener('click', function () {
-	  console.log("You finally clicked without jQuery");
-	  scrollClick();
-	});
+	// run on homepage only
+	if ( body.classList.contains('home') ) {
+		document.querySelector('.arrow-click').addEventListener('click', function () {
+		  scrollClick();
+		});	
+	}
 });
 
 (function($) {
@@ -51,8 +33,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	function mobileMenu() {
 		$hamburger.click(function() {
-			$(this).toggleClass('is-active');
-			$mainMenu.toggleClass('show-menu');
+
+			console.log('hamburger clicked');
+
+			if ( $(this).hasClass('is-active') ) {
+				$(this).removeClass('is-active');
+				$mainMenu.removeClass('show-menu');
+			} else {
+				$(this).addClass('is-active');
+				$mainMenu.addClass('show-menu');
+			}
 		});
 
 		$mainMenuItem.each(function (){
@@ -64,13 +54,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		// Main nav dropdown click
 		$('#menu-main > .menu-item-has-children > .fa').click(function() {
 			$subMenuOne.toggleClass('show-submenu');
-			console.log('sub menu depth one clicked');
 		});
 
 		// Sub nav dropdown click
 		$('#menu-main > .menu-item-has-children > ul li > .fa').click(function() {
 			$subMenuTwo.toggleClass('show-submenu');
-			console.log('sub menu depth two clicked');
 		});
 	}
 
@@ -111,11 +99,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 	$(document).ready(function() {
-		mobileMenu();
-		typedOne({
 
-		});
-		homeSlider();
+		// if is home page run typed and slider functions
+		if ( $('body').hasClass('home') ) {
+			typedOne();
+			homeSlider();	
+		}
+		mobileMenu();
+		
 
 
 
