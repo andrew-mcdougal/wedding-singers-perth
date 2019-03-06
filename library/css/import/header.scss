@@ -1,23 +1,3 @@
-
-
-
-$white: #FFF;
-$primary: #231F20;
-$primary-lite: lighten($primary, 20%);
-$primary-liter: lighten($primary, 40%);
-
-$secondary: #ad974f;
-$secondary-lite: lighten($secondary, 20%);
-$secondary-liter: lighten($secondary, 40%);
-
-$grey: #757575;
-
-
-$font-heading-logo: 'Great Vibes', cursive;
-
-
-
-
 // mobile first header
 .header {
   background: $white;
@@ -75,7 +55,6 @@ $font-heading-logo: 'Great Vibes', cursive;
 .nav {
   max-height: 0;
   overflow: hidden;
-  transition: all .4s ease-in;
 
   &.show-menu {
     max-height: 100vh;
@@ -88,6 +67,7 @@ $font-heading-logo: 'Great Vibes', cursive;
 
     a {
       font-size: .9em;
+      transition: background-color .4s ease-in;
 
       color: $primary;
       text-transform: uppercase;
@@ -104,7 +84,7 @@ $font-heading-logo: 'Great Vibes', cursive;
 
       &:hover,
       &:visited:hover {
-        background: lighten($grey, 50%);
+        background-color: lighten($grey, 50%);
       }
     }
 
@@ -164,15 +144,6 @@ $font-heading-logo: 'Great Vibes', cursive;
     max-height: none;
     overflow: visible;
 
-    /*
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    */
-
     &:before {
       display: none;
     }
@@ -221,7 +192,7 @@ $font-heading-logo: 'Great Vibes', cursive;
 
 
 // responsive
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .inner-header .inner-header--logo {
     display: flex;
     align-items: center;
@@ -263,25 +234,3 @@ $font-heading-logo: 'Great Vibes', cursive;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

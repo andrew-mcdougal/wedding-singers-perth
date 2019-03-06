@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display|Fanwood+Text|Questrial|Acme|Open+Sans:400,800);
-
 $white: #FFF;
 $primary: #231F20;
 $primary-lite: lighten($primary, 20%);
@@ -18,9 +16,32 @@ $orange: #FFA904;
 
 $font-heading-logo: 'Great Vibes', cursive;
 $font-headings: 'Playfair Display', serif;
-$font-body: 'Fauna One', sans-serif;
-$font-body: 'Fanwood Text', sans-serif;
-$font-body: 'Open Sans', sans-serif;
+$font-body: 'Playfair Display', serif;
+
+
+// page transitions
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.js .transition {
+    opacity: 0;
+}
+
+
+.loaded .transition {
+    
+    animation-duration: .25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
 
 
 // settings
@@ -29,6 +50,7 @@ body {
   line-height: 120%;
   font-family: $font-body;
   color: $primary;
+  background: #000;
 }
 
 a, a:visited { color: $primary; }
@@ -37,8 +59,8 @@ a:hover, a:focus, a:visited:hover, a:visited:focus { color: $secondary; }
 a:link, a:visited:link { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 p {
-	margin-top: 0;
-	line-height: 120%;
+  margin-top: 0;
+  line-height: 120%;
 }
 
 .intro-text p {
@@ -51,12 +73,12 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-headings;
+  font-family: $font-headings;
 }
 
 // pages
 #content {
-	background: $grey-light;
+  background: $grey-light;
     margin-top: 0;
 }
 
@@ -66,13 +88,12 @@ h6 {
     width: 100%;
 
     @media all and (min-width: 768px) { 
-    	max-width: 1234px;
+      max-width: 1234px;
     }
 
     .hentry {
-    	border: none;
-    	border-radius: 5px;
-        margin: 1.5em 0;
+      border: 1px solid $grey-light;
+      margin: 0;
 
         header {
             border: none;
@@ -84,11 +105,23 @@ h6 {
     }
 }
 
+@media all and (min-width: 768px) {
+    #inner-content.wrap {
+
+        .hentry {
+          border: none;
+            border-radius: 5px;
+            margin: 1.5em 0;
+        }
+    }
+}
+
+
 .entry-content {
 
-	p {
-		line-height: 150%;
-	}
+  p {
+    line-height: 150%;
+  }
 
     li {
         list-style: disc inside none;
@@ -100,6 +133,30 @@ h6 {
         height: 1px;
         background: $grey-light;
     }
+}
+
+// grid templates
+.grid-column {
+  display: block;
+}
+
+@media all and (min-width: 768px) {
+  .grid-column-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 2em;
+  }
+
+  .grid-column-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+
+  .grid-column-no-margin {
+    margin-bottom: 0;
+  }
 }
 
 // contact page
@@ -144,13 +201,21 @@ h6 {
             background: lighten($blue, 45%);;
         }
     }
+
+    .wpcf7-response-output {
+        border-radius: 5px;
+        border-color: $primary;
+        text-align: center;
+        padding: 1em;
+        margin-top: .5em;
+    }
 }
     
 
 footer {
 
-	p {
-		margin-top: 1em;
-		font-family: $font-headings;
-	}
+  p {
+    margin-top: 1em;
+    font-family: $font-headings;
+  }
 }

@@ -13,6 +13,12 @@
 
 		<title><?php wp_title(''); ?></title>
 
+        <style>
+            .js .transition {
+                opacity: 0;
+            }
+        </style>
+
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
@@ -36,13 +42,23 @@
 		<?php // end of wordpress head ?>
 
 		<?php // drop Google Analytics Here ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50801394-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-50801394-3');
+    </script>
+
 		<?php // end analytics ?>
 
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-		<div id="container">
+		<div id="container" class="transition">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
