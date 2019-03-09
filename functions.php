@@ -293,6 +293,11 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
+// Add social media to menu
+function add_last_nav_item($items) {
+  return $items .= '<li class="mobile-grid grid-column grid-column-two"><a href="https://www.facebook.com/YourWeddingSingerPerth" target="_blank"><span class="fab fa-facebook-f"></span></a><a href="https://www.instagram.com/yourweddingsingerperth/" target="_blank"><span class="fab fa-instagram"></span></a></li>';
+}
+add_filter('wp_nav_menu_items','add_last_nav_item');
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	function scrollClick() {
 	    document.querySelector('.home-content').scrollIntoView({ 
 	    behavior: 'smooth',
-	    block: "start"
+	    block: "center"
 	  });
 	}
 

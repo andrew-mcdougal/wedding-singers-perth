@@ -22,6 +22,14 @@
 }
 
 
+// social media
+.social-container {
+  width: 100px;
+  height: 30px;
+  background: green;
+}
+
+
 // hamburger
 .hamburger {
   position: absolute;
@@ -88,6 +96,7 @@
     a {
       font-size: .9em;
       transition: background-color .4s ease-in;
+      padding: .65em;
 
       color: $primary;
       text-transform: uppercase;

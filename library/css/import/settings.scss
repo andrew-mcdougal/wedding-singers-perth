@@ -124,6 +124,11 @@ h6 {
 
 
 .entry-content {
+  padding: 1.5em 1em 0;
+
+  @media all and (min-width: 768px) {
+    padding: 1.5em 1.5em 0;
+  }
 
   p {
     line-height: 150%;
@@ -144,24 +149,33 @@ h6 {
 // grid templates
 .grid-column {
   display: block;
+
+  //mobile override
+  &.mobile-grid {
+    display: grid;
+    text-align: center;
+  }
 }
 
+.grid-column-three {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  margin-bottom: 2em;
+}
+
+.grid-column-two {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.grid-column-no-margin {
+  margin-bottom: 0;
+}
+
+
 @media all and (min-width: 768px) {
-  .grid-column-three {
+  .grid-column {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
-    margin-bottom: 2em;
-  }
-
-  .grid-column-two {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-  }
-
-  .grid-column-no-margin {
-    margin-bottom: 0;
   }
 }
 
