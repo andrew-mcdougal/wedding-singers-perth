@@ -1,7 +1,26 @@
 // mobile first header
 .header {
   background: $white;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  transition: all .3s ease-in;
+  border-bottom: 1px solid $grey-light;
+
+  @media (min-width:768px) {
+    position: relative;
+
+    .site-subheader {
+      display: block!important;
+    }
+
+    &.is-fixed {
+      position: fixed;
+      top: -183px;
+    }
+  }
 }
+
 
 // hamburger
 .hamburger {
@@ -28,13 +47,14 @@
       }
 
       &.site-header {
-        margin-bottom: 12px;        
+        margin-bottom: 0px;
       }
 
       &.site-subheader {
         color: $grey;
         font-size: 1em;
         letter-spacing: 0.05em;
+        margin-top: 12px;
         margin-bottom: -8px;
       }
     }

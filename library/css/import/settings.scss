@@ -80,6 +80,12 @@ h6 {
 #content {
   background: $grey-light;
     margin-top: 0;
+    position: relative;
+    top: 90px;
+
+    @media all and (min-width: 768px) {
+      top: 0;
+    }
 }
 
 #inner-content.wrap {

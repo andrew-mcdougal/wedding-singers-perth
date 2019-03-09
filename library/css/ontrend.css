@@ -45,7 +45,12 @@ h6 {
 
 #content {
   background: #dbdbdb;
-  margin-top: 0; }
+  margin-top: 0;
+  position: relative;
+  top: 90px; }
+  @media all and (min-width: 768px) {
+    #content {
+      top: 0; } }
 
 #inner-content.wrap {
   margin-top: 0;
@@ -143,7 +148,20 @@ footer p {
   font-family: "Playfair Display", serif; }
 
 .header {
-  background: #FFF; }
+  background: #FFF;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  transition: all .3s ease-in;
+  border-bottom: 1px solid #dbdbdb; }
+  @media (min-width: 768px) {
+    .header {
+      position: relative; }
+      .header .site-subheader {
+        display: block !important; }
+      .header.is-fixed {
+        position: fixed;
+        top: -183px; } }
 
 .hamburger {
   position: absolute;
@@ -161,11 +179,12 @@ footer p {
       text-decoration: none;
       color: #231F20; }
     .inner-header .inner-header--logo .header-font.site-header {
-      margin-bottom: 12px; }
+      margin-bottom: 0px; }
     .inner-header .inner-header--logo .header-font.site-subheader {
       color: #757575;
       font-size: 1em;
       letter-spacing: 0.05em;
+      margin-top: 12px;
       margin-bottom: -8px; }
 .inner-header .hamburger .hamburger-inner {
   background-color: #231F20; }

@@ -22,6 +22,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 (function($) {
+
+	// mobile class
+	var mobileClass = function() {
+		var windowWidth = document.body.clientWidth;
+
+		if (windowWidth < 768) {
+			$('body').addClass('mobile-width');
+		} else if (windowWidth >= 768) {
+			$('body').removeClass('mobile-width');
+		};
+	};
+  
+  	// fire on page resize
+  	$(window).resize(function(){
+    	mobileClass();
+  	});
+
+	// sticky nav
+	$(window).scroll(function() {
+
+		var $tagline = $('.mobile-width .site-subheader');
+		
+		// desktop sticky nav
+		if ($(this).scrollTop() > 183) {
+			$('.header').addClass('is-fixed');
+		} else {
+			$('.header').removeClass('is-fixed');
+		}
+
+		// mobile scroll remove tagline
+		if ($(this).scrollTop() > 150) {
+			$tagline.hide('fast');
+		} else {
+			$tagline.show('fast');
+		}
+	});
 	
 	// $ Works! You can test it with next line if you like
 	// console.log($);
@@ -106,6 +142,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			homeSlider();	
 		}
 		mobileMenu();
+
+		mobileClass();
 		
 
 
