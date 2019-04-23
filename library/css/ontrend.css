@@ -167,6 +167,17 @@ h6 {
   padding: 1em;
   margin-top: .5em; }
 
+@media (min-width: 768px) {
+  .grid {
+    display: grid; }
+    .grid.grid-columns-two {
+      grid-template-columns: 1fr 1fr; }
+    .grid.grid-columns-three {
+      grid-template-columns: 1fr 1fr 1fr; }
+    .grid.grid-gap-one {
+      grid-gap: 1em; }
+    .grid.grid-gap-two {
+      grid-gap: 2em; } }
 footer p {
   margin-top: 1em;
   font-family: "Playfair Display", serif; }
