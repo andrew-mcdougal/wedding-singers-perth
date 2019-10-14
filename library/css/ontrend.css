@@ -189,14 +189,19 @@ footer p {
   width: 100%;
   transition: all .3s ease-in;
   border-bottom: 1px solid #dbdbdb; }
+  .header .fixed-nav {
+    display: none;
+    width: 100%;
+    background: #FFF; }
   @media (min-width: 768px) {
     .header {
       position: relative; }
       .header .site-subheader {
         display: block !important; }
-      .header.is-fixed {
+      .header .fixed-nav.is-fixed {
+        display: block;
         position: fixed;
-        top: -183px; } }
+        top: 0px; } }
 
 .social-container {
   width: 100px;
@@ -608,10 +613,18 @@ footer p {
   background-color: #0455c6; }
 
 .panel {
-  padding: 30px 18px;
+  padding: 0 18px;
+  margin: 2em 0;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height .5s ease; }
+
+.songlist input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+  font-family: "Playfair Display", serif;
+  color: #231F20;
+  background: #cae0fe; }
 
 /*# sourceMappingURL=ontrend.css.map */

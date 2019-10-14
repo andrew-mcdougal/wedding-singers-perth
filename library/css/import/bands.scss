@@ -42,9 +42,19 @@
 }
 
 .panel {
-  padding: 30px 18px;
+  padding: 0 18px;
+  margin: 2em 0;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height .5s ease;
+}
+
+// search
+.songlist input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+  font-family: $font-body;
+  color: $primary;
+  background: lighten($blue, 40%);
 }

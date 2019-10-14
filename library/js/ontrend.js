@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 		// desktop sticky nav
 		if ($(this).scrollTop() > 183) {
-			$('.header').addClass('is-fixed');
+			$('.header .fixed-nav').addClass('is-fixed');
 		} else {
-			$('.header').removeClass('is-fixed');
+			$('.header .fixed-nav').removeClass('is-fixed');
 		}
 
 		// mobile scroll remove tagline

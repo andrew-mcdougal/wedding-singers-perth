@@ -61,10 +61,37 @@ if( have_rows('bands') ):
 
 		// if has songlist
 		if ($songlist) {
-			echo '<button class="accordion">Click to view song list</button><div id="accordion" class="songlist panel">' . $songlist . '</div>';
+			?>
+
+		<script>
+		// search songlist
+		function searchSongs() {
+		  // Declare variables
+		  var input, filter, ul, songPara, a, i, txtValue;
+		  input = document.getElementById('myInput');
+		  filter = input.value.toUpperCase();
+		  ul = document.getElementById("accordion");
+		  songPara = ul.getElementsByTagName('p');
+
+		  // Loop through all list items, and hide those who don't match the search query
+		  for (i = 0; i < songPara.length; i++) {
+		    a = songPara[i];
+		    txtValue = a.textContent || a.innerText;
+		    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		      songPara[i].style.display = "";
+		    } else {
+		      songPara[i].style.display = "none";
+		    }
+		  }
 		}
+		</script>
+		<button class="accordion">Click to view song list</button>
+		<div id="accordion" class="songlist panel">
+			<input type="text" id="myInput" onkeyup="searchSongs()" placeholder="Search for song names or artists..">
+			<?php echo $songlist . '</div>';
+		} // end if
 		echo '</div>';
-		echo '</div>';
+	echo '</div>';
 
     endwhile;
 
