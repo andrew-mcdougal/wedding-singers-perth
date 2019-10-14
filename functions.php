@@ -252,7 +252,7 @@ function prefix_add_footer_styles() {
   // javascript
   wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/library/js/slick/slick.min.js' );
   wp_enqueue_script( 'typed-js', get_stylesheet_directory_uri() . '/library/js/libs/typed.min.js' );
-  wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/ontrend.js?v=3' );
+  wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/ontrend.js?v=4' );
   
   // css
   wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/library/js/slick/slick.css' );

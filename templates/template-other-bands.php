@@ -33,6 +33,7 @@ if( have_rows('bands') ):
         // vars
 		$name = get_sub_field('band_name');
 		$content = get_sub_field('description');
+		$songlist = get_sub_field('songlist');
 		$image = get_sub_field('image');
 		$sizeSquare = 'square-size';
 		$imageDefault = get_stylesheet_directory_uri() . '/library/images/wedding-placeholder-4-square.jpg';
@@ -57,8 +58,12 @@ if( have_rows('bands') ):
 
 		echo '<h4>' . $name . '</h4>';
 		echo $content;
-		echo '</div>';
 
+		// if has songlist
+		if ($songlist) {
+			echo '<button class="accordion">Click to view song list</button><div id="accordion" class="songlist panel">' . $songlist . '</div>';
+		}
+		echo '</div>';
 		echo '</div>';
 
     endwhile;
