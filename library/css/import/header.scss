@@ -7,6 +7,13 @@
   transition: all .3s ease-in;
   border-bottom: 1px solid $grey-light;
 
+  // hidden nav for fixed
+  .fixed-nav {
+    display: none;
+    width: 100%;
+    background: $white;
+  }
+
   @media (min-width:768px) {
     position: relative;
 
@@ -14,9 +21,10 @@
       display: block!important;
     }
 
-    &.is-fixed {
+    .fixed-nav.is-fixed {
+      display: block;
       position: fixed;
-      top: -183px;
+      top: 0px;
     }
   }
 }

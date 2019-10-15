@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 		// desktop sticky nav
 		if ($(this).scrollTop() > 183) {
-			$('.header').addClass('is-fixed');
+			$('.header .fixed-nav').addClass('is-fixed');
 		} else {
-			$('.header').removeClass('is-fixed');
+			$('.header .fixed-nav').removeClass('is-fixed');
 		}
 
 		// mobile scroll remove tagline
@@ -131,6 +131,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			speed: 3000
 		});	
 	}
+
+// accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
 	
 
 

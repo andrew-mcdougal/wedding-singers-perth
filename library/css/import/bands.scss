@@ -22,3 +22,39 @@
     }
   }
 }
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #0460df;
+  color: #FFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: darken(#0460df, 5%);
+}
+
+.panel {
+  padding: 0 18px;
+  margin: 2em 0;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease;
+}
+
+// search
+.songlist input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+  font-family: $font-body;
+  color: $primary;
+  background: lighten($blue, 40%);
+}
