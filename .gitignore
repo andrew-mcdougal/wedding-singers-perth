@@ -2,3 +2,4 @@
 /library/css/.sass-cache/*
 /.sass-cache
 library/css/ontrend.css.map
+*.map

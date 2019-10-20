@@ -20,15 +20,36 @@
               <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );} ?>
               <h1 class="single-title custom-post-type-title">Wedding entertainment</h1>
             </header>
-              <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article role="article">
-              <section class="entry-content cf">
-                <h3><?php echo get_the_excerpt(); ?></h3>
-                <p class="tagline"><?php the_field('tagline'); ?></p>
-                <hr />
-                <h2>What you get:</h2>
-              </section> <!-- end article section -->
+            <div class="act-list-grid">
+            <?php if (have_posts()) : while (have_posts()) : the_post();
+            // variables
+            $image = get_the_post_thumbnail_url(get_the_ID(),'square-size');
+            $thumbnail_id = get_post_thumbnail_id( $post->ID );
+            $image_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+            // ACF
+            $intro = get_field('intro');
+            ?>
+              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+                <header class="article-header">
+                  <div class="intro-grid">
+                    <?php 
+                    if ( $image ) {
+                      the_post_thumbnail( 'square-size' );
+                    } else {
+
+                    }
+                    ?>
+                  <div>
+                    <h4><?php the_title(); ?></h4>
+                    <?php echo $intro; ?>
+                  </div>
+                </div>
+                <a class="button-standard button-standard--full" href="<?php echo get_permalink(); ?>">Click for details</a>
+                </header>
+                
+              </article>
             <?php endwhile; ?>
+            </div>
             <?php else : ?>
             <article id="post-not-found" class="cf">
               <header class="article-header">
