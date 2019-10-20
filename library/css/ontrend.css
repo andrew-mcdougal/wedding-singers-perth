@@ -630,6 +630,11 @@ footer p {
   color: #231F20;
   background: #cae0fe; }
 
+.acts-single #tab-section li {
+  list-style: none; }
+  .acts-single #tab-section li a {
+    font-size: 1.2em;
+    font-weight: 700; }
 .acts-single .intro-grid {
   display: grid; }
   .acts-single .intro-grid img,

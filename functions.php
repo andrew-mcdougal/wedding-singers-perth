@@ -239,7 +239,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Great+Vibes|Playfair+Display');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Great+Vibes|Playfair+Display,400:700');
   wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 }
 
@@ -250,11 +250,13 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 
 function prefix_add_footer_styles() {
   // javascript
+  wp_enqueue_script( 'tabs', get_stylesheet_directory_uri() . '/library/js/libs/tabby.js' );
   wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/library/js/slick/slick.min.js' );
   wp_enqueue_script( 'typed-js', get_stylesheet_directory_uri() . '/library/js/libs/typed.min.js' );
   wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/ontrend.js?v=5' );
   
   // css
+  wp_enqueue_style( 'tabby', get_stylesheet_directory_uri() . '/library/css/tabby.css' );
   wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/library/js/slick/slick.css' );
   wp_enqueue_style( 'hamburger-css', get_stylesheet_directory_uri() . '/library/css/hamburgers/hamburgers.css' );
   wp_enqueue_style( 'ontrend-css', get_stylesheet_directory_uri() . '/library/css/ontrend.css?v=8' );

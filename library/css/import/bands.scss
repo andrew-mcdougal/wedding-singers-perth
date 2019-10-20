@@ -61,6 +61,19 @@
 
 .acts-single {
 
+  // tabs
+  #tab-section {
+
+    li {
+      list-style: none;
+      
+      a {
+        font-size: 1.2em;
+        font-weight: 700;
+      }
+    } 
+  }
+
   .intro-grid {
     display: grid;
 

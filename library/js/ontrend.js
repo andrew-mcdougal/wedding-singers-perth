@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var body = document.body;
 	body.classList.add("loaded");
 
-
 	function scrollClick() {
 	    document.querySelector('.home-content').scrollIntoView({ 
 	    behavior: 'smooth',
