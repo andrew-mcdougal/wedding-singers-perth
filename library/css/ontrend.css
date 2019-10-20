@@ -12,6 +12,9 @@
   animation-fill-mode: both;
   animation-name: fadeIn; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-size: 18px;
   line-height: 120%;
@@ -626,5 +629,26 @@ footer p {
   font-family: "Playfair Display", serif;
   color: #231F20;
   background: #cae0fe; }
+
+.acts-single .intro-grid {
+  display: grid; }
+  .acts-single .intro-grid img,
+  .acts-single .intro-grid div {
+    height: auto;
+    width: auto;
+    max-width: 100%; }
+  .acts-single .intro-grid img {
+    margin-bottom: 1em; }
+  .acts-single .intro-grid p {
+    font-size: 1.2em; }
+  @media all and (min-width: 767px) {
+    .acts-single .intro-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2em; }
+      .acts-single .intro-grid img,
+      .acts-single .intro-grid div {
+        margin: auto; }
+      .acts-single .intro-grid p {
+        font-size: 1.5em; } }
 
 /*# sourceMappingURL=ontrend.css.map */

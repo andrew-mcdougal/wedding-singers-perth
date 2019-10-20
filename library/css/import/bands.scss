@@ -58,3 +58,45 @@
   color: $primary;
   background: lighten($blue, 40%);
 }
+
+.acts-single {
+
+  .intro-grid {
+    display: grid;
+
+    img,
+    div {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+
+    img {
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    @media all and (min-width: 767px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2em;
+
+      img, 
+      div {
+        margin: auto;
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+    }
+
+
+  }
+
+  section {
+    
+  }
+}
