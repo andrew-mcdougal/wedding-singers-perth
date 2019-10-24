@@ -368,13 +368,9 @@ function act_taxonomies() {
     'labels' => $labels,
     'hierarchical' => true,
   );
-  register_taxonomy( 'act_category', 'act', $args );
+  register_taxonomy( 'entertainment-type', 'act', $args );
 }
 add_action( 'init', 'act_taxonomies', 0 );
-
-
-
-
 
 
 add_action( 'init', 'create_acts', 0 );
