@@ -30,6 +30,7 @@
               $intro = get_field('intro');
               $bio = get_field('bio');
               $songlist = get_field('songlist');
+              $video = get_field('video_content');
               ?>
 
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
@@ -62,9 +63,13 @@
                     <li><a data-tabby-default href="#bio">About</a></li>
                     <?php if($songlist) { ?>
                     <li><a href="#songs">Songlist</a></li>
-                    <?php if( have_rows('testimonials') ) { ?>
+                    <?php }
+                    if( $video ) { ?>
+                    <li><a href="#video">Videos</a></li>
+                    <?php }
+                    if( have_rows('testimonials') ) { ?>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <?php } } ?>
+                    <?php } ?>
                   </ul>
                 </section>
                 <?php } ?>
@@ -105,6 +110,10 @@
                     <?php echo $songlist . '</div>';
                   } // end if
                   ?>
+                </section>
+                
+                <section id="video" class="entry-content cf">
+                  <?php echo $video; ?>
                 </section>
 
                 <?php
