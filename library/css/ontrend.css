@@ -12,6 +12,9 @@
   animation-fill-mode: both;
   animation-name: fadeIn; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-size: 18px;
   line-height: 120%;
@@ -152,6 +155,10 @@ h6 {
   .wpcf7 .wpcf7-submit:hover {
     background: #ea9900;
     background: #0460df; }
+  .wpcf7 .wpcf7-submit.button-standard--full {
+    width: 100%;
+    text-align: center;
+    margin: 1em 0 0; }
 .wpcf7 input,
 .wpcf7 textarea {
   max-width: 100%;
@@ -478,6 +485,10 @@ footer p {
   .button-standard:hover {
     background: #ea9900;
     background: #0460df; }
+  .button-standard.button-standard--full {
+    width: 100%;
+    text-align: center;
+    margin: 1em 0 0; }
 
 .card-content {
   position: relative;
@@ -626,5 +637,43 @@ footer p {
   font-family: "Playfair Display", serif;
   color: #231F20;
   background: #cae0fe; }
+
+.acts-single .single-title {
+  margin: .5em 0 1em 0; }
+.acts-single #tab-section li {
+  list-style: none; }
+  .acts-single #tab-section li a {
+    font-size: 1.2em;
+    font-weight: 700; }
+
+.intro-grid {
+  display: grid; }
+  .intro-grid img,
+  .intro-grid div {
+    height: auto;
+    width: auto;
+    max-width: 100%; }
+  .intro-grid img {
+    margin-bottom: 1em; }
+  .intro-grid p {
+    font-size: 1.2em; }
+  @media all and (min-width: 767px) {
+    .intro-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2em; }
+      .intro-grid img,
+      .intro-grid div {
+        margin: auto; }
+      .intro-grid p {
+        font-size: 1.5em; } }
+
+.act-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em; }
+  .act-list-grid .intro-grid p:nth-child(n+3) {
+    display: none; }
+  .act-list-grid .intro-grid p {
+    font-size: 1em; }
 
 /*# sourceMappingURL=ontrend.css.map */

@@ -19,4 +19,10 @@
     background: darken($orange,5%);
     background: darken($blue,5%);
   }
+
+  &.button-standard--full {
+    width: 100%;
+    text-align: center;
+    margin: 1em 0 0;
+  }
 }

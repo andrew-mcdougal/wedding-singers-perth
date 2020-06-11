@@ -43,6 +43,10 @@ $font-body: 'Playfair Display', serif;
     animation-name: fadeIn;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 // settings
 body {

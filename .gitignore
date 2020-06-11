@@ -2,3 +2,5 @@
 /library/css/.sass-cache/*
 /.sass-cache
 .DS_Store
+library/css/ontrend.css.map
+*.map

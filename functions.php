@@ -239,7 +239,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Great+Vibes|Playfair+Display');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Great+Vibes|Playfair+Display,400:700');
   wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 }
 
@@ -250,11 +250,13 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 
 function prefix_add_footer_styles() {
   // javascript
+  wp_enqueue_script( 'tabs', get_stylesheet_directory_uri() . '/library/js/libs/tabby.js' );
   wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/library/js/slick/slick.min.js' );
   wp_enqueue_script( 'typed-js', get_stylesheet_directory_uri() . '/library/js/libs/typed.min.js' );
   wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/ontrend.js?v=5' );
   
   // css
+  wp_enqueue_style( 'tabby', get_stylesheet_directory_uri() . '/library/css/tabby.css' );
   wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/library/js/slick/slick.css' );
   wp_enqueue_style( 'hamburger-css', get_stylesheet_directory_uri() . '/library/css/hamburgers/hamburgers.css' );
   wp_enqueue_style( 'ontrend-css', get_stylesheet_directory_uri() . '/library/css/ontrend.css?v=8' );
@@ -262,7 +264,7 @@ function prefix_add_footer_styles() {
 add_action( 'get_footer', 'prefix_add_footer_styles' );
 
 
-// bands post type
+// bands post type (turned into Packages)
 function create_bands() {
  
     register_post_type( 'bands',
@@ -281,6 +283,97 @@ function create_bands() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_bands', 0 );
+
+
+
+
+
+
+/*
+* Creating a function to create our Custom Post Type - Acts
+*/
+ 
+function create_acts() {
+ 
+// Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Acts', 'Post Type General Name' ),
+        'singular_name'       => _x( 'Act', 'Post Type Singular Name' ),
+        'menu_name'           => __( 'Acts'),
+        'all_items'           => __( 'All Acts' ),
+        'view_item'           => __( 'View Act' ),
+        'add_new_item'        => __( 'Add New Act' ),
+        'add_new'             => __( 'Add New' ),
+        'edit_item'           => __( 'Edit Act' ),
+        'update_item'         => __( 'Update Act' ),
+        'search_items'        => __( 'Search Act' ),
+        'not_found'           => __( 'Not Found' ),
+        'not_found_in_trash'  => __( 'Not found in Trash' ),
+    );
+     
+// Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'Wedding entertainment' ),
+        'description'         => __( 'Categories of entertainment' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'thumbnail', 'revisions', ),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'types' ),
+        'rewrite' => array('slug' => 'wedding-entertainment'),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 3,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'act', $args );
+ 
+}
+ 
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+
+
+
+function act_taxonomies() {
+  $labels = array(
+    'name'              => _x( 'Act Categories', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Act Category', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Act Categories' ),
+    'all_items'         => __( 'All Act Categories' ),
+    'edit_item'         => __( 'Edit Act Category' ), 
+    'update_item'       => __( 'Update Act Category' ),
+    'add_new_item'      => __( 'Add New Act Category' ),
+    'new_item_name'     => __( 'New Act Category' ),
+    'menu_name'         => __( 'Act Categories' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'entertainment-type', 'act', $args );
+}
+add_action( 'init', 'act_taxonomies', 0 );
+
+
+add_action( 'init', 'create_acts', 0 );
 
 
 // image sizes

@@ -58,3 +58,78 @@
   color: $primary;
   background: lighten($blue, 40%);
 }
+
+.acts-single {
+
+  .single-title {
+    margin: .5em 0 1em 0;
+  }
+
+  // tabs
+  #tab-section {
+
+    li {
+      list-style: none;
+
+      a {
+        font-size: 1.2em;
+        font-weight: 700;
+      }
+    } 
+  }
+
+  section {
+    
+  }
+}
+
+.intro-grid {
+  display: grid;
+
+  img,
+  div {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  img {
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  @media all and (min-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+
+    img, 
+    div {
+      margin: auto;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+
+// archive bands
+.act-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+
+  .intro-grid {
+
+    p:nth-child(n+3) {
+      display: none;
+    }
+
+    p {
+      font-size: 1em;
+    }
+  }
+}
