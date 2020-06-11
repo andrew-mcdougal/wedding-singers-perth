@@ -1,14 +1,14 @@
 <?php
 /*
- * CUSTOM POST TYPE ARCHIVE TEMPLATE
+ * CUSTOM POST TYPE TAXONOMY TEMPLATE
  *
- * This is the custom post type archive template. If you edit the custom post type name,
+ * This is the custom post type taxonomy template. If you edit the custom taxonomy name,
  * you've got to change the name of this template to reflect that name change.
  *
- * For Example, if your custom post type is called "register_post_type( 'bookmarks')",
- * then your template name should be archive-bookmarks.php
+ * For Example, if your custom taxonomy is called "register_taxonomy('shoes')",
+ * then your template name should be taxonomy-shoes.php
  *
- * For more info: http://codex.wordpress.org/Post_Type_Templates
+ * For more info: http://codex.wordpress.org/Post_Type_Templates#Displaying_Custom_Taxonomies
 */
 ?>
 
@@ -18,7 +18,7 @@
           <main id="main" class="m-all t-3of3 d-7of7 cf hentry" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
             <header class="article-header">
               <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );} ?>
-              <h1 class="single-title custom-post-type-title">Wedding entertainments</h1>
+              <h1 class="single-title custom-post-type-title">Wedding entertainment: <?php single_cat_title(); ?></h1>
             </header>
             <div class="act-list-grid">
             <?php if (have_posts()) : while (have_posts()) : the_post();
@@ -29,7 +29,7 @@
             // ACF
             $intro = get_field('intro');
             ?>
-              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+              <article id="post-<?php the_ID(); ?>" <?php post_class('cf band-flex'); ?> role="article">
                 <header class="article-header">
                   <div class="intro-grid">
                     <?php 
@@ -53,14 +53,11 @@
             <?php else : ?>
             <article id="post-not-found" class="cf">
               <header class="article-header">
-                <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+                <h2>Oops, no Acts found in this category.</h2>
               </header>
               <section class="entry-content">
                 <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
               </section>
-              <footer class="article-footer">
-                <p><?php _e( 'This is the error message in the single-custom_type.php template.', 'bonestheme' ); ?></p>
-              </footer>
             <?php endif; ?>
             </article>
           </main>

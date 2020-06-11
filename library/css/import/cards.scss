@@ -69,3 +69,18 @@
     }
   }
 }
+
+.card-categories {
+  grid-template-columns: auto auto;
+  justify-content: start;
+  grid-gap: 1.5em;
+
+  .card {
+    max-width: 300px;
+    margin: 0;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 1em;
+    }
+  }
+}

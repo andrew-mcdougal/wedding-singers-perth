@@ -122,7 +122,17 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
 
+  .band-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
   .intro-grid {
+    margin-bottom: 1em;
+
+    img {
+      border-radius: 5px;
+    }
 
     p:nth-child(n+3) {
       display: none;
@@ -132,4 +142,39 @@
       font-size: 1em;
     }
   }
+
+  .button-standard.button-standard--full {
+    margin: 1em 1.5em 0;
+    display: block;
+    max-width: 100%;
+    width: auto;
+    border-radius: 5px;
+    margin-top: auto;
+  }
 }
+
+
+// gallery thumbs
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  .gallery-item {
+    margin: 0 .5em .5em 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
