@@ -132,6 +132,13 @@
 
     img {
       border-radius: 5px;
+      margin: 0;
+    }
+
+    div {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
     }
 
     p:nth-child(n+3) {
@@ -144,12 +151,11 @@
   }
 
   .button-standard.button-standard--full {
-    margin: 1em 1.5em 0;
+    padding: .25em;
+    margin: auto 0 0 0;
     display: block;
-    max-width: 100%;
-    width: auto;
+    width: 100%;
     border-radius: 5px;
-    margin-top: auto;
   }
 }
 

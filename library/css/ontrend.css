@@ -688,18 +688,22 @@ footer p {
   .act-list-grid .intro-grid {
     margin-bottom: 1em; }
     .act-list-grid .intro-grid img {
-      border-radius: 5px; }
+      border-radius: 5px;
+      margin: 0; }
+    .act-list-grid .intro-grid div {
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
     .act-list-grid .intro-grid p:nth-child(n+3) {
       display: none; }
     .act-list-grid .intro-grid p {
       font-size: 1em; }
   .act-list-grid .button-standard.button-standard--full {
-    margin: 1em 1.5em 0;
+    padding: .25em;
+    margin: auto 0 0 0;
     display: block;
-    max-width: 100%;
-    width: auto;
-    border-radius: 5px;
-    margin-top: auto; }
+    width: 100%;
+    border-radius: 5px; }
 
 .gallery {
   display: flex;

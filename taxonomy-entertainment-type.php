@@ -27,7 +27,7 @@
             $thumbnail_id = get_post_thumbnail_id( $post->ID );
             $image_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
             // ACF
-            $intro = get_field('intro');
+            $intro = get_field('intro', false, false);
             ?>
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf band-flex'); ?> role="article">
                 <header class="article-header">
@@ -41,11 +41,11 @@
                     ?>
                   <div>
                     <h4><?php the_title(); ?></h4>
-                    <?php echo $intro; ?>
+                    <?php echo '<p>' . $intro . '</p>'; ?>
+                    <a class="button-standard button-standard--full" href="<?php echo get_permalink(); ?>">Click for details</a>
                   </div>
                 </div>
                 </header>
-                <a class="button-standard button-standard--full" href="<?php echo get_permalink(); ?>">Click for details</a>
                 
               </article>
             <?php endwhile; ?>
